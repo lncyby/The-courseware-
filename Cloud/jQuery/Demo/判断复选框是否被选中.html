@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>判断复选框是否被选中</title>
+  </head>
+  <body>
+    <label><input id="one" type="checkbox">请选择！</label>
+
+    <script src="./jquery.js"></script>
+    <script type="text/javascript">
+      // 等待DOM元素加载完毕
+      $(document).ready(function () {
+        var $one = $("#one"); // jQuery对象
+        var one = $one[0]; // DOM对象，jQuery对象为类数组对象
+
+        // $one.click(function () {
+        //   // DOM方式判断
+        //   if (one.checked) {
+        //     alert("OK!");
+        //   }
+        // });
+
+        $one.click(function () {
+          // jQuery方式判断
+          if ($one.is(":checked")) {
+            alert("OK!");
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

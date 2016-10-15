@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>every() and some()</title>
+  </head>
+  <body>
+
+    <script>
+      // 语法：arr.every(callback[, thisArg])
+      // callback: 用来测试每个元素的函数
+      // every()为数组中的每一个元素执行一次callback函数
+      // every()返回true or false
+
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+      function e(element, index, array) {
+        return (element > 2);
+      }
+      function s(element, index, array) {
+        return (element > 2);
+      }
+
+      var result = numbers.every(e);
+      // 在测试的所有元素中，callback函数都返回true, every()才返回true, 否则返回false
+      console.log(result); // false
+
+      // 在测试的所有元素中，callback函数都返回false, some()才返回false, 否则返回true 
+      var result = numbers.some(s);
+      console.log(result); // true
+    </script>
+  </body>
+</html>

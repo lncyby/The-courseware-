@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      html, body{
+        height: 100%;
+        padding: 0;
+        margin: 0;
+      }
+      .a{
+        height: 100%;
+        background-color: #0da5d6;
+        padding-top: 100px;
+        position: relative;
+      }
+      .a div{
+        text-align: center;
+      }
+      .a div:nth-child(2){
+        margin-top: 100px;
+      }
+      .a div:nth-child(2) img{
+        margin: 0 60px;
+        animation-name: one;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+      }
+      .a div:nth-child(3){
+        margin-top: 50px;
+      }
+      @keyframes one{
+        0%{
+          margin: 0 60px;
+        }
+        50%{
+          margin: 0 10px;
+        }
+        100%{
+          margin: 0 60px;
+        }
+      }
+
+      .b{
+        height: 100%;
+        background-color: #de8a10;
+        position: relative;
+      }
+      .b div{
+        position: absolute;
+      }
+      .b div:nth-child(1){
+        top: 50%;
+        left: 200px;
+        margin-top: -150px;
+      }
+      .b div:nth-child(2){
+        top: 50%;
+        right: 200px;
+        margin-top: -250px;
+      }
+      .b div:nth-child(3){
+        bottom: 0;
+        left: 900px;
+        transform: translateY(210px);
+        animation-name: two;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+      }
+      @keyframes two{
+        0%{
+          transform: translateX(0) translateY(210px);
+        }
+        50%{
+          transform: translateX(480px) translateY(-430px);
+        }
+        100%{
+          transform: translateX(480px) translateY(-430px);
+        }
+      }
+      .c{
+        height: 100%;
+        background-color: #16bb9d;
+        position: relative;
+      }
+      .c-1{
+        position: relative;
+      }
+      .c-1 div{
+        width: 529px;
+        background-image: url("./result.png");
+        animation-name: three;
+        animation-duration: 3s;
+        animation-timing-function: linear;
+        position: absolute;
+        top: 54px;
+      }
+      .c-1 img:nth-child(2){
+        width: 0;
+        position: absolute;
+        top: 50%;
+        margin-top: -11px;
+        left: 15px;
+        animation-name: four;
+        animation-duration: 4s;
+        animation-timing-function: linear;
+      }
+      @keyframes three{
+        0%{
+          height: 0;
+        }
+        50%{
+          height: 372px;
+        }
+        100%{
+          height: 0;
+        }
+      }
+      @keyframes four{
+        0%{
+          width: 0;
+          height: 22px;
+        }
+        50%{
+          width: 99px;
+          height: 22px;
+        }
+        100%{
+          width: 0;
+          height: 22px;
+        }
+      }
+
+    </style>
+  </head>
+  <body>
+    <div class="a">
+      <div>
+        <img src="./logo.png" alt="">
+      </div>
+      <div>
+        <img src="./text_1.png" alt="" />
+        <img src="./text_2.png" alt="" />
+        <img src="./text_3.png" alt="" />
+        <img src="./text_4.png" alt="" />
+        <img src="./text_5.png" alt="" />
+        <img src="./text_6.png" alt="" />
+        <img src="./text_7.png" alt="" />
+        <img src="./text_8.png" alt="" />
+      </div>
+      <div>
+        <img src="./info_1.png" alt="">
+      </div>
+    </div>
+    <div class="b">
+      <div>
+        <img src="./info_3.png" alt="">
+      </div>
+      <div>
+        <img src="./circle.png" alt="">
+      </div>
+      <div>
+        <img src="./rocket.png" alt="">
+      </div>
+    </div>
+    <div class="c">
+      <div class="c-1">
+        <img src="./search.png" alt="">
+        <img src="./key.png" alt="">
+        <div></div>
+      </div>
+    </div>
+  </body>
+</html>

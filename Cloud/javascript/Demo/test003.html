@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    选项1：<input id="check1" type="checkbox">
+    选项2：<input id="check2" type="checkbox">
+    选项3：<input id="check3" type="checkbox">
+    选项4：<input id="check4" type="checkbox">
+    选项5：<input id="check5" type="checkbox"><br><br>
+    <button id="btn-1">全选</button>
+    <button id="btn-2">反选</button>
+    <button id="btn-3">取消全选</button>
+  </body>
+
+  <script>
+    var checks = document.getElementsByTagName("input");
+    var buttons = document.getElementsByTagName("button");
+
+    buttons[0].onclick = function() {
+      for (var i = 0; i < checks.length; i++){
+        checks[i].checked = true;
+      }
+    }
+
+    buttons[2].onclick = function() {
+      for (var i = 0; i < checks.length; i++){
+        checks[i].checked = false;
+      }
+    }
+
+    buttons[1].onclick = function() {
+      for (var i = 0; i < checks.length; i++){
+        checks[i].checked = !checks[i].checked;
+      }
+    }
+  </script>
+</html>

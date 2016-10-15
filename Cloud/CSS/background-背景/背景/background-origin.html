@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 500px;
+        height: 300px;
+        border: 7px dashed red;
+        padding: 10px;
+        float: left;
+        margin: 50px 0 0 50px;
+        background: url("./logo_2.jpg") no-repeat;
+      }
+      #div-1{
+        /* 设置背景图片的起点为边框 */
+        background-origin: border-box;
+        /* background-origin规定了background-position是相对于边框、外边距还是内容区域
+           进行定位 */
+        background-position: left;
+      }
+      #div-2{
+        /* 设置背景图片的起点为外边距，默认值*/
+        background-origin: padding-box;
+      }
+      #div-3{
+        /* 设置背景图片的起点为内容区域 */
+        background-origin: content-box;
+        background-position: left;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1"></div>
+    <div id="div-2"></div>
+    <div id="div-3"></div>
+    <div id="div-4"></div>
+  </body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>timeout()</title>
+    <style media="screen">
+      div {
+        width: 500px;
+        height: 500px;
+        font-size: 200px;
+        text-align: center;
+        margin: 100px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="times"></div>
+
+    <script type="text/javascript">
+      // 语法：var timeoutID = window.setTimeout(func, delay);
+      // timeoutID是setTimeout()的数字ID，是其唯一辨识符
+      // func是你想在delay毫秒之后执行的函数
+      // delay是延迟的毫秒数
+
+      var times = document.getElementById("times");
+
+      var timer = null;
+      var num = 10;
+
+      function time() {
+        if (num < 1) {
+          clearTimeout(timer);
+          times.innerHTML = "boom!";
+          return;
+        } else {
+          times.innerHTML = num;
+          // timer = setTimeout(time, 1000);
+          // arguments.callee: 指向当前正在执行的函数
+          // arguments.callee对匿名函数来讲十分有用
+          timer = setTimeout(arguments.callee, 1000);
+        }
+        num--;
+      }
+      time();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo012</title>
+    <style media="screen">
+      div {
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: 0 0 5px black;
+        margin: 20px;
+        text-align: center;
+        /* 文本总是相对于行高居中 */
+        line-height: 100px;
+        float: left;
+      }
+      .one {
+        background-color: rgb(27, 105, 23);
+      }
+      .two {
+        background-color: rgb(46, 62, 97);
+      }
+      .three {
+        background-color: rgb(166, 111, 46);
+      }
+      .four {
+        background-color: rgb(80, 32, 171);
+      }
+      .five {
+        background-color: rgb(31, 159, 164);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="one">单击</div>
+    <div class="two">单击</div>
+    <div class="three">单击</div>
+    <div class="four">单击</div>
+    <div id="result">我会变化</div>
+    <div class="five">我会变大</div>
+
+    <script src="./jquery.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("div").click(function () {
+          // css(): 获取当前对象的css属性值
+          var color = $(this).css("background-color");
+          // css(): 设置当前对象的css属性值
+          $("#result").css("background-color", color);
+        });
+
+        $(".five").click(function () {
+          $(this).css({
+            // index: $(".five")获取的元素集合的索引值
+            // value: 当前对象的当前width属性值
+            width: function (index, value) {
+              // parseFloat()将参数解析为浮点数并返回
+              return parseFloat(value) + 10 + "px";
+            },
+            height: function (index, value) {
+              return parseFloat(value) + 10 + "px";
+            },
+            borderRadius: function (index, value) {
+              return parseFloat(value) + 5 + "px";
+            }
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

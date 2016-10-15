@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>子盒子浮动</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f {
+         width: 1000px;
+         height: 300px;
+         background-color: blue;
+         margin: 0 auto;
+       }
+
+       .f div {
+         width: 300px;
+         height: 100px;
+         /*float: left;*/
+         float: right;
+       }
+
+       .f .s1 {
+         background-color: red;
+       }
+
+       .f .s2 {
+         background-color: yellow;
+       }
+
+       .f .s3 {
+         background-color: pink;
+       }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="f">
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+    </div>
+
+  </body>
+</html>

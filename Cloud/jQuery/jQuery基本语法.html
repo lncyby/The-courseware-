@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>jQuery语法</title>
+    <style media="screen">
+      div {
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        box-shadow: 0 0 10px black;
+        margin: 100px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+
+    <script src="./jquery.js"></script>
+    <script type="text/javascript">
+      // $(selector).action()
+      // 美元符号定义jQuery
+      // selector查找HTML元素
+      // 执行对元素的操作
+
+      function getRandomColorRgb() {
+        var colorValue = "rgb(";
+        for (var i = 0; i < 3; i++) {
+          colorValue += Math.ceil(Math.random() * 255);
+
+          if (i < 2) {
+            colorValue += ",";
+          }
+        }
+        colorValue += ")";
+        return colorValue;
+      }
+
+      // 文档就绪事件：防止文档在完全加载之前运行jQuery代码
+      $(document).ready(function () {
+        $("div").mouseover(function () {
+          $(this).css("background-color", getRandomColorRgb());
+        });
+        $("div").mouseout(function () {
+          $(this).css("background-color", "");
+        });
+      });
+
+      // 简洁写法
+      // $(function () {
+      //   $("div").mouseover(function () {
+      //     $(this).css("background-color", getRandomColorRgb());
+      //   });
+      //   $("div").mouseout(function () {
+      //     $(this).css("background-color", "");
+      //   });
+      // });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo002</title>
+    <link rel="stylesheet" href="./jquery-ui.css">
+    <style media="screen">
+      #container {
+        width: 400px;
+        margin: 20px auto 0;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: 0 0 5px black;
+        margin: 20px auto 0;
+        font-size: 30px;
+        text-align: center;
+        line-height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1"></div>
+    <div id="container">
+      <span id="button-start">开始</span>
+      <span id="button-stop">暂停</span>
+      <span id="button-go">继续</span>
+    </div>
+
+    <script src="./jquery.js"></script>
+    <script src="./jquery-ui.min.js"></script>
+    <script type="text/javascript">
+      var num = 0;
+      var $div = $("#div-1");
+      $(document).ready(function () {
+        var $start = $("#button-start")
+        var $stop = $("#button-stop");
+        var $go = $("#button-go");
+        $($div).progressbar({max: 100});
+        $($start).click(function () {
+          var timer = setInterval(change, 100);
+          $($stop).click(function () {
+            clearInterval(timer);
+          });
+          $($go).click(function () {
+            timer = setInterval(change, 100);
+          });
+        });
+      });
+
+      function change() {
+        num++;
+        if (num == 100) {
+          num = 0;
+        }
+        $($div).progressbar("option", "value", num);
+      }
+    </script>
+  </body>
+</html>

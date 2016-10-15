@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>javascript实现类似String.trim()的方法</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var str = " Hello World ";
+
+      function myTrim() {
+        /* 单或（non-short-circuit logical operator）：
+           操作符左右两侧的操作数都会进行计算 */
+        /* 双或（short-circuit logical operator）：
+           如果左操作数为真，即返回左操作数的值，不再计算右操作数的值 */
+        var newStr = str.replace(/^\s*|\s*$/g, "");
+        return newStr;
+      }
+      console.log("[" + myTrim(str) + "]");
+    </script>
+  </body>
+</html>

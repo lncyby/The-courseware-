@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>css的优先级</title>
+    <style>
+     .div1 p {
+       color: blue;
+     }
+
+     div p {
+       color: red;
+     }
+
+     #divid p {
+       color: purple;
+     }
+
+     p {
+       color: yellow;
+     }
+
+    </style>
+  </head>
+  <body>
+
+<!-- id > class > 标签 > 继承 > 浏览器的默认属性, 当它们都应用于同一个元素 -->
+    <div id="divid" class="div1">
+      <p>div1中的p元素</p>
+    </div>
+
+  </body>
+</html>

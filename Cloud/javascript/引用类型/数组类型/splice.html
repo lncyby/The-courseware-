@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>splice()</title>
+  </head>
+  <body>
+
+    <script>
+      // 语法：array.splice(start, deleteCount[, item1[, item2[, ...]]])
+      var colors = ["red", "green", "blue"];
+      var removed = colors.splice(0, 1); // 删除索引为0的元素
+      console.log(colors); // ["green", "blue"]
+      console.log(removed); // ["red"]
+
+      // 从索引为1的位置开始依次插入"yellw"、"orange"
+      removed = colors.splice(1, 0, "yellow", "orange");
+      console.log(colors); // ["green", "yellow", "orange", "blue"]
+      console.log(removed); // [], 删除的项数为0
+
+      // 删除一项， 插入一项
+      removed = colors.splice(1, 1, "red");
+      console.log(colors);
+      console.log(removed);
+    </script>
+
+  </body>
+</html>

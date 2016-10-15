@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>获得以两个数为区间的随机数</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      function getRandom(min, max) {
+        // Math.ceil()只有当Math.random()为0时才能取到min
+        // Math.floor和parseInt()永远不会取到最大值max
+        return Math.round(Math.random() * (max - min) + min);
+      }
+    </script>
+  </body>
+</html>

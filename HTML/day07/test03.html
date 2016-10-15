@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>绝对定位</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 500px;
+        height: 200px;
+        background: red;
+        position: absolute;/*绝对定位, 脱离了标准流*/
+        top: 100px;/*相对body top的距离*/
+        left: 10px ;/*相对于body left的距离*/
+      }
+
+      .f1 {
+        width: 300px;
+        height: 400px;
+        background: yellow;
+        margin: 0 auto;
+        /*f1没有设置定位相关的属性值，那么它的子盒子在进行绝对定位的时候
+        仍然是相对于body的定位*/
+      }
+
+      .f1-s {
+        width: 100px;
+        height: 100px;
+        background: blue;
+        position: absolute;
+        left: 10px;
+        top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f"></div>
+    <div class="f1">
+      <div class="f1-s"></div>
+    </div>
+
+  </body>
+</html>

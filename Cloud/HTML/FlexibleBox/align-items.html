@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 1000px;
+        box-shadow: 0 0 10px black;
+        margin: 50px auto 0;
+      }
+      ul{
+        height: 400px;
+        list-style: none;
+        display: flex;
+        padding: 0;
+      }
+      ul li{
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        font-size: 100px;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      .flex-start ul{
+        align-items: flex-start;
+      }
+
+      .flex-end ul{
+        align-items: flex-end;
+      }
+
+      .center ul{
+        align-items: center;
+      }
+
+      .baseline ul{
+        align-items: baseline;
+      }
+
+      .stretch ul{
+        align-items: stretch;
+      }
+      .stretch ul li{
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-start">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="flex-end">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="center">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="baseline">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="stretch">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+  </body>
+</html>

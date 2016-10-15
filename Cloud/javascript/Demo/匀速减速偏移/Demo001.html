@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animation</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        font-size: 50px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+        margin-left: 50px;
+        cursor: pointer;
+      }
+      #btn-1 {
+        background-color: rgb(128, 29, 55);
+      }
+      #btn-2 {
+        background-color: rgb(63, 211, 236);
+      }
+      div {
+        width: 300px;
+        height: 300px;
+        /* 注意定位和外边距 */
+        /*margin-left: 25px;*/
+        position: absolute;
+      }
+      #box-1 {
+        margin-top: 50px;
+        background-color: rgb(128, 29, 55);
+      }
+      #box-2 {
+        margin-top: 350px;
+        background-color: rgb(63, 211, 236);
+      }
+    </style>
+  </head>
+  <body>
+    <span id="btn-1">one</span>
+    <span id="btn-2">two</span>
+    <div id="box-1"></div>
+    <div id="box-2"></div>
+  </body>
+
+  <script type="text/javascript">
+    var btn1 = document.getElementById("btn-1");
+    var btn2 = document.getElementById("btn-2");
+    var box1 = document.getElementById("box-1");
+    var box2 = document.getElementById("box-2");
+
+    btn1.onclick = function () {
+      move_1(box1, 800);
+      move_2(box2, 800);
+    };
+    btn2.onclick = function () {
+      move_2(box1, 1000);
+      move_2(box2, 1000);
+    };
+    // 匀速偏移
+    function move_1(obj, target) {
+      var speed = target > obj.offsetLeft ? 15 : -15;
+
+      var timer = setInterval(function () {
+        console.log(obj.offsetLeft);
+        var result = target - obj.offsetLeft;
+        if (Math.abs(result) <= 15) {
+          // 通过样式设置偏移量，offsetLeft为只读属性
+          obj.style.left = target + "px";
+          clearInterval(timer);
+        } else {
+          obj.style.left = obj.offsetLeft + speed + "px";
+        }
+      }, 30);
+    }
+
+    // 减速偏移
+    function move_2(obj, target) {
+      var timer = setInterval(function () {
+        var speed = (target - obj.offsetLeft) / 10;
+        speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+        // 到最后必然相等，没明白，多看看
+        if (target == obj.offsetLeft) {
+          clearInterval(timer);
+        } else {
+          obj.style.left = obj.offsetLeft + speed + "px";
+        }
+      }, 30);
+    }
+  </script>
+</html>

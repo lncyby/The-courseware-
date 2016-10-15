@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>正则表达式</title>
+  </head>
+  <body>
+      <script>
+          var text = "name=lisi&age=10&hobby=swim&hobby=basketball&score=80&hobby=football";
+          console.log("原：" + text);
+          var newt = text.replace(/&hobby=\w*/g, "");
+          newt = newt.replace(/10/g,"10&hobby=swim,basketball,football");
+          console.log("新：" + newt);
+      </script>
+  </body>
+</html>

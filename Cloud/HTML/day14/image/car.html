@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div img{
+        width: 200px;
+        height: 80px;
+        animation: runcar 2s linear infinite;
+      }
+      @keframes runcar{
+        0%{
+          transform: skewX(45deg);
+        }
+        50%{
+          transform: translateX(1000px);
+        }
+        100%{
+          transform: skewX(-45deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./car.jpg" alt="">
+    </div>
+  </body>
+</html>

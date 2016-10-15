@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>双11</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 500px;
+      height: 150px;
+      background: pink;
+      margin: 50px auto;
+    }
+    .box span {
+      height: 150px;
+      line-height: 150px;
+      text-align: center;
+    }
+    </style>
+</head>
+<body>
+<div class="box" id="box-id">
+  <span id="span-id"></span>
+</div>
+<script>
+    var box = document.getElementById("box-id");
+    var span = document.getElementById("span-id");
+
+    var end = new Date("2016-11-11 12:0:0");
+    var now = new Date();
+    var sec =  parseInt((end.getTime() - now.getTime()) / 1000);
+    console.log(sec);
+
+    var day = parseInt(sec / 3600 / 24);
+    console.log(day);
+    span.innerHTML = "距离抢购时间仅剩：" + day + "天" + hour + "时" + min + "分" + sec + "秒";
+
+
+</script>
+
+</body>
+</html>

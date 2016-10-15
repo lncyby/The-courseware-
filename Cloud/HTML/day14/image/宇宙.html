@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      html, body{
+        background-image: url("./bg.jpg")
+      }
+      div:not(.div-9){
+        border: 2px solid silver;
+        position: relative;
+      }
+      div:not(.div-1){
+        position: absolute;
+      }
+      .div-1{
+        width: 900px;
+        height: 900px;
+        margin: 40px auto 0;
+        border-radius: 450px;
+      }
+      .div-2{
+        width: 800px;
+        height: 800px;
+        border-radius: 400px;
+        top: 50px;
+        left: 50px;
+      }
+      .div-2-s{
+        width: 32px;
+        height: 32px;
+        border-radius: 16px;
+        background-color: #005344;
+        border: none !important;
+        left: 500px;
+      }
+      .div-3{
+        width: 700px;
+        height: 700px;
+        border-radius: 350px;
+        top: 100px;
+        left: 100px;
+        animation: turn 8s ease-in infinite;
+      }
+      .div-3-s{
+        width: 44px;
+        height: 44px;
+        border-radius: 22px;
+        background-color: #11264f;
+        border: none !important;
+        top: 635px;
+        left: 500px;
+      }
+      .div-4{
+        width: 600px;
+        height: 600px;
+        border-radius: 300px;
+        top: 150px;
+        left: 150px;
+        animation: turn 7s ease-in-out infinite;
+      }
+      .div-4-s{
+        width: 36px;
+        height: 36px;
+        border-radius: 18px;
+        background-color: silver;
+        border: none !important;
+        top: 180px;
+      }
+      .div-5{
+        width: 500px;
+        height: 500px;
+        border-radius: 250px;
+        top: 200px;
+        left: 200px;
+        animation: turn 5s linear infinite;
+      }
+      .div-5-s{
+        width: 20px;
+        height: 20px;
+        border-radius: 25px;
+        background-color: #65c294;
+        border: none !important;
+        top: 200px;
+        left: 488px;
+      }
+      .div-6{
+        width: 400px;
+        height: 400px;
+        border-radius: 200px;
+        top: 250px;
+        left: 250px;
+        animation: turn 5s ease-in infinite;
+      }
+      .div-6-s{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: #33a3dc;
+        border: none !important;
+        top: 275px;
+      }
+      .div-7{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        top: 300px;
+        left: 300px;
+        animation: turn 4s ease infinite;
+      }
+      .div-7-s{
+        width: 30px;
+        height: 30px;
+        border-radius: 15px;
+        background-color: #ed1941;
+        border: none !important;
+        left: 70px;
+      }
+      .div-8{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        top: 350px;
+        left: 350px;
+        animation: turn 3s linear infinite;
+      }
+      .div-8-s{
+        width: 20px;
+        height: 20px;
+        background-color: #f2eada;
+        border-radius: 10px;
+        border: none !important;
+        top: 45px;
+      }
+      .div-9{
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50px;
+        top: 400px;
+        left: 400px;
+      }
+      @keyframes turn{
+        0%{
+          transform: rotate(0);
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="div-1">
+      <div class="div-2">
+        <div class="div-2-s"></div>
+      </div>
+      <div class="div-3">
+        <div class="div-3-s"></div>
+      </div>
+      <div class="div-4">
+        <div class="div-4-s"></div>
+      </div>
+      <div class="div-5">
+        <div class="div-5-s"></div>
+      </div>
+      <div class="div-6">
+        <div class="div-6-s"></div>
+      </div>
+      <div class="div-7">
+        <div class="div-7-s"></div>
+      </div>
+      <div class="div-8">
+        <div class="div-8-s">  </div>
+      </div>
+      <div class="div-9"></div>
+    </div>
+  </body>
+</html>

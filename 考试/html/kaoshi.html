@@ -1,0 +1,1204 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>小米官网</title>
+    <link rel="shorcut icon" href="./mi-image/favicon.ico">
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body,html {
+      background-color: #f5f5f5;
+    }
+    @font-face {
+      font-family: "myfont"; /*自己指定的字体名称*/
+      src: url("./iconfont/iconfont.eot");
+      src: url('./iconfont/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+      url('./iconfont/iconfont.woff') format('woff'), /* chrome、firefox */
+      url('./iconfont/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+      url('./iconfont/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+    }
+    .iconfont {
+      font-family: "myfont";
+      font-size: 20px;
+      font-style: normal;
+      font-weight: normal;
+    }
+
+
+    .clearfix::after,
+    .clearfix::before {
+      content: "";
+      display: block;
+      height: 0;
+      visibility: hidden;
+      clear: both;
+    }
+    .clearfix {
+      zoom:1;
+    }
+    .daohang {
+      width: 100%;
+      height: 40px;
+      background-color: #333333;
+    }
+    ul {
+      list-style: none;
+    }
+    .daohang .box {
+      width: 1226px;
+      height: 40px;
+      margin: 0 auto;
+    }
+    .daohang ul li {
+      float: left;
+      height: 40px;
+      line-height: 40px;
+    }
+    .daohang ul li a {
+      text-decoration: none;
+      color: #b0b0b0;
+      font-size: 12px;
+      padding: 0px 6px 0px 6px;
+    }
+    .daohang ul li a:hover{
+      color: white;
+    }
+    .daohang ul li i {
+      font-size: 13px;
+      color: #3c423c;
+    }
+    .daohang .box-right {
+    width: 206px;
+    height: 40px;
+    float: right;
+    }
+    .daohang .box-right .shop {
+    width: 100px;
+    text-align: center;
+    background-color: #424242;
+    position: relative;
+    padding-left: 15px;
+    }
+    .daohang .box-right .zhuce {
+      padding-right: 15px;
+    }
+
+
+
+
+    .daohang .box-right .shop span {
+    position: absolute;
+    /*width: 22px;*/
+    /*height: 18px;*/
+    /*background: url("./mi-image/shopcar.png");*/
+    margin-left: -80px;
+    /*margin-top: 12px;*/
+    }
+    .daohang .box-right .shop-color {
+      color: #b0b0b0;
+    }
+    .daohang .box-right .shop:hover {
+      background: white;
+    }
+    .daohang .box-right .shop:hover a {
+      color: #ff6700;
+    }
+    .daohang .box-right .shop:hover span {
+      color: #ff6700;
+    }
+
+
+
+
+
+    .top {
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 24px;
+    }
+    .top-left,.top-center,.top-right {
+      float: left;
+    }
+    .top .top-left {
+      width: 56px;
+      height: 57px;
+      background: url("./mi-image/min.png");
+      cursor: pointer;
+    }
+    .top .top-center {
+      margin-left: 180px;
+    }
+    .top .top-center ul li{
+      height: 57px;
+      line-height: 57px;
+      float: left;
+      padding: 0px 10px 0px 9px;
+    }
+    .top .top-center ul li a {
+    font-size: 17px;
+    color: #333333;
+    text-decoration: none;
+    }
+    .top .top-center ul li a:hover {
+      color: #ff6700;
+    }
+    .top .top-right {
+      margin-left: 42px;
+      position: relative;
+    }
+    .top .top-right .text {
+      width: 233px;
+      height: 47px;
+      border: 1px solid #e0e0e0;
+      float: left;
+      padding-left: 10px;
+    }
+    .top .top-right .button {
+      height: 49px;
+      width: 47px;
+      border: 1px solid #e0e0e0;
+      border-left: none;
+      background-color: white;
+      float: left;
+      cursor: pointer;
+    }
+    .top .top-right a {
+      font-size: 12px;
+      text-decoration: none;
+      color: #757575;
+    }
+    .top .top-right a:hover {
+      color: white;
+    }
+    .top .top-right .window-1 {
+      width: 53px;
+      height: 18px;
+      background-color: #eeeeee;
+      position: absolute;
+      text-align: center;
+      margin-left: 90px;
+      margin-top: 15px;
+    }
+    .top .top-right .window-2 {
+      width: 84px;
+      height: 18px;
+      background-color: #eeeeee;
+      position: absolute;
+      text-align: center;
+      margin-left: 150px;
+      margin-top: 15px;
+    }
+    .top .top-right .window-1:hover,
+    .top .top-right .window-2:hover {
+      background-color: #ff6700;
+    }
+    .top .top-right .find {
+      width: 21px;
+      height: 23px;
+      background: url("./mi-image/find.png");
+      position: absolute;
+      margin-left: 259px;
+      margin-top: 15px;
+      cursor: pointer;
+    }
+    .banner {
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 20px;
+    }
+    .banner-left {
+      width: 235px;
+      height: 460px;
+      background-color: #5c544c;
+      float: left;
+    }
+    .banner-left ul {
+      /*width: 235px;*/
+      /*height: 400px;*/
+      /*padding: 16px 0px 0px 30px;*/
+      padding-top: 16px;
+    }
+    .banner-left ul li {
+      height: 43px;
+      width: 235px;
+      line-height: 43px;
+    }
+    .banner-left ul li a {
+      font-size: 14px;
+      text-decoration: none;
+      color: white;
+      padding-left: 30px;
+    }
+    .banner-left ul li i {
+      float: right;
+      font-size: 20px;
+      margin-right: 23px;
+      color: #aeaaa6;
+      font-family: "宋体";
+    }
+    .banner-left ul li:hover {
+      background-color: #ff6700;
+    }
+    .banner-right {
+      width: 991px;
+      height: 460px;
+      background: url("./mi-image/1.jpg") right ;
+      float: left;
+      cursor: pointer;
+    }
+    .banner-bottom {
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 15px;
+
+    }
+    .banner-bottom .banner-bottom-left {
+      width: 235px;
+      height: 170px;
+      background-color: #5c544c;
+      float: left;
+      position: relative;
+    }
+    .banner-bottom .banner-bottom-left ul {
+    width: 216px;
+    height: 152px;
+    padding: 8px 8px 8px 10px;
+    }
+    .banner-bottom .banner-bottom-left ul li {
+      float: left;
+      height: 75px;
+      width: 70px;
+      border-right: 1px solid #665e57;
+      border-bottom: 1px solid #665e57;
+      cursor: pointer;
+    }
+    .banner-bottom .banner-bottom-left ul .spec-1 {
+      border-right: none;
+    }
+    .banner-bottom .banner-bottom-left ul .spec-2 {
+      border-bottom: none;
+    }
+    .banner-bottom .banner-bottom-left ul .spec-3 {
+      border-right: none;
+      border-bottom: none;
+    }
+    .banner-bottom .banner-bottom-left .empty-box-1 {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #5c544c;
+      margin-top: -90px;
+      margin-left: 75px;
+    }
+    .banner-bottom .banner-bottom-left .empty-box-2 {
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      background: #5c544c;
+      margin-top: -90px;
+      margin-left: 146px;
+    }
+    .banner-bottom .banner-bottom-left ul li a {
+      position: relative;
+    }
+    .banner-bottom .banner-bottom-left ul li:hover a span {
+      color: white;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-1 {
+      width: 12px;
+      height: 16px;
+      background: url("./mi-image/oven2.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-2 {
+      width: 18px;
+      height: 17px;
+      background: url("./mi-image/oven3.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-3 {
+      width: 22px;
+      height: 12px;
+      background: url("./mi-image/oven4.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-4 {
+      width: 21px;
+      height: 25px;
+      background: url("./mi-image/oven5.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-5 {
+      width: 22px;
+      height: 19px;
+      background: url("./mi-image/oven1.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a .p-6 {
+      width: 20px;
+      height: 12px;
+      background: url("./mi-image/oven6.png");
+      position: absolute;
+    }
+    .banner-bottom .banner-bottom-left ul li a i {
+      margin-left: 24px;
+      margin-top: 17px;
+    }
+    .banner-bottom .banner-bottom-left ul li a span {
+      width: 50px;
+      position: absolute;
+      margin-top: 50px;
+      margin-left: 12px;
+      font-size: 12px;
+      color: #cfcdcb;
+    }
+    .banner-bottom .banner-bottom-pic {
+      width: 990px;
+      height: 172px;
+      float: left;
+      cursor: pointer;
+    }
+    .banner-bottom .banner-bottom-pic div {
+      float: left;
+      margin-left: 14px;
+    }
+    .banner-bottom .banner-bottom-pic .banner-bottom-pic-1 {
+      width: 316px;
+      height: 170px;
+      background: url("./mi-image/mi1.png");
+    }
+    .banner-bottom .banner-bottom-pic .banner-bottom-pic-2 {
+      width: 316px;
+      height: 170px;
+      background: url("./mi-image/mi2.png");
+    }
+    .banner-bottom .banner-bottom-pic .banner-bottom-pic-3 {
+      width: 316px;
+      height: 170px;
+      background: url("./mi-image/mi3.png");
+    }
+    .guanggao {
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 25px;
+    }
+    .guanggao-top h3 {
+      height: 60px;
+      line-height: 60px;
+      position: relative;
+    }
+    .guanggao-top h3 input {
+      position: absolute;
+      width: 33px;
+      height: 21px;
+      border: 1px solid #e0e0e0;
+      background: #ffffff;
+      color: #b0b0b0;
+      font-size: 12px;
+      margin-top: 18px;
+      cursor: pointer;
+    }
+    .guanggao-top h3 input:hover {
+      color: #ff6700;
+    }
+    .guanggao-top h3 .lt {
+      margin-left: 1047px;
+    }
+    .guanggao-top h3 .gt {
+      margin-left: 1080px;
+    }
+    .guanggao-bottom-box1 {
+      border-top: 1px solid #ffac13;
+      margin-right: 14px;
+      height: 339px;
+      width: 234px;
+      background-color: #fafafa;
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .guanggao-bottom-box2 {
+      border-top: 1px solid #83c44e;
+      margin-right: 14px;
+      height: 339px;
+      width: 234px;
+      background-color: #fafafa;
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .guanggao-bottom-box3 {
+      border-top: 1px solid #2196f3;
+      margin-right: 14px;
+      height: 339px;
+      width: 234px;
+      background-color: #fafafa;
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .guanggao-bottom-box4 {
+      border-top: 1px solid #e53935;
+      margin-right: 14px;
+      height: 339px;
+      width: 234px;
+      background-color: #fafafa;
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .guanggao-bottom-box5 {
+      border-top: 1px solid #00c0a5;
+      height: 339px;
+      width: 234px;
+      background-color: #fafafa;
+      float: left;
+      position: relative;
+      cursor: pointer;
+    }
+    .guanggao-bottom-pic1 {
+      width:160px;
+      height: 160px;
+      background: url("./mi-image/5.jpg");
+      position: absolute;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    .guanggao-bottom-pic2 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/11.jpg");
+      position: absolute;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    .guanggao-bottom-pic3 {
+      width:150px;
+      height: 150px;
+      background: url("./mi-image/16.jpg");
+      position: absolute;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    .guanggao-bottom-pic4 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/15.jpg");
+      position: absolute;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    .guanggao-bottom-pic5 {
+      width:150px;
+      height: 150px;
+      background: url("./mi-image/18.jpg");
+      position: absolute;
+      margin-left: 32px;
+      margin-top: 30px;
+    }
+    .guanggao-bottom i,.guanggao-bottom span,.guanggao-bottom p {
+      position: absolute;
+    }
+    .guanggao-bottom i {
+      margin-top: 229px;
+      font-size: 15px;
+      color: black;
+      margin-left: 56px;
+    }
+    .guanggao-bottom span {
+      margin-top: 251px;
+      font-size: 13px;
+      color: #b0b0b0;
+      margin-left: 56px;
+    }
+    .guanggao-bottom p {
+      margin-top: 285px;
+      font-size: 15px;
+      color: #ff6709;
+      margin-left: 94px;
+    }
+
+    .topic {
+      width: 1226px;
+      margin: 0 auto;
+      margin-top: 75px;
+    }
+    .topic h3 {
+      margin-bottom: 15px;
+      position: relative;
+    }
+    .topic h3 i {
+      position: absolute;
+      height: 30px;
+      line-height: 30px;
+      font-size: 16px;
+      margin-left: 1052px;
+      color: #424242;
+      cursor: pointer;
+    }
+    .topic h3 i:hover {
+      color: #ff6700;
+    }
+    .topic h3 i:hover p {
+      background: #ff6700;
+    }
+    .topic h3 p {
+      position: absolute;
+      width: 23px;
+      height: 23px;
+      line-height: 23px;
+      text-align: center;
+      background: #b0b0b0;
+      color: white;
+      border-radius: 12px;
+      margin-top: -27px;
+      margin-left: 72px;
+    }
+    .topic .topic-left {
+     width: 234px;
+     height: 614px;
+     background: url("./mi-image/23.jpg");
+     float: left;
+     cursor: pointer;
+    }
+    .topic .topic-right {
+      float: left;
+      width: 992px;
+    }
+    .topic .topic-right-box1 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box2 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box3 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box4 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box5 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box6 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box7 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .topic-right-box8 {
+      height: 302px;
+      width: 237px;
+      background: white;
+      float: left;
+      margin-left: 10px;
+      margin-top: 10px;
+      position: relative;
+      cursor: pointer;
+    }
+    .topic .pic-1 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-1 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-2 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-3 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-4 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-5 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-6 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-7 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic .pic-8 {
+      width: 150px;
+      height: 150px;
+      background: url("./mi-image/13.jpg");
+      margin-left: 32px;
+      margin-top: 30px;
+      position: absolute;
+    }
+    .topic-right i,.topic-right span,.topic-right p {
+      position: absolute;
+    }
+    .topic-right i {
+      margin-top: 209px;
+      font-size: 15px;
+      color: black;
+      margin-left: 56px;
+    }
+    .topic-right span {
+      margin-top: 231px;
+      font-size: 13px;
+      color: #b0b0b0;
+      margin-left: 56px;
+    }
+    .topic-right p {
+      margin-top: 265px;
+      font-size: 15px;
+      color: #ff6709;
+      margin-left: 94px;
+    }
+
+
+    .bottom-top {
+      width: 100%;
+      height: 272px;
+      background-color: white;
+      margin-top: 60px;
+    }
+    .bottom-top-top {
+      width: 1226px;
+      margin: 0 auto;
+      border-bottom: 1px solid #e0e0e0;
+    }
+    .bottom-top-top ul {
+      width: 1226px;
+      margin: 0 auto;
+      padding-left: 10px;
+    }
+    .bottom-top-top ul li {
+      float: left;
+      width: 245px;
+      height: 80px;
+      line-height: 80px;
+    }
+    .bottom-top-top ul li a {
+      border-right: 1px solid #e0e0e0;
+      color: #616161;
+      font-size: 17px;
+      text-decoration: none;
+      padding-left: 56px;
+      padding-right: 53px;
+      position: relative;
+    }
+    .bottom-top-top ul li .spec-4 {
+      border-right: none;
+    }
+    .bottom-top-top ul li a:hover {
+      color: #ff6709;
+    }
+    .bottom-top-bottom {
+      width: 1226px;
+      margin: 0 auto;
+    }
+    .bottom-top-top ul li a .p-1 {
+      width: 25px;
+      height: 23px;
+      background: url("./mi-image/m1.png");
+      position: absolute;
+      margin-left: -148px;
+      margin-top: 30px;
+    }
+    .bottom-top-top ul li a .p-2 {
+      width: 24px;
+      height: 21px;
+      background: url("./mi-image/m2.png");
+      position: absolute;
+      margin-left: -140px;
+      margin-top: 30px;
+    }
+    .bottom-top-top ul li a .p-3 {
+      width: 24px;
+      height: 21px;
+      background: url("./mi-image/m3.png");
+      position: absolute;
+      margin-left: -133px;
+      margin-top: 30px;
+    }
+    .bottom-top-top ul li a .p-4 {
+      width: 22px;
+      height: 21px;
+      background: url("./mi-image/m4.png");
+      position: absolute;
+      margin-left: -130px;
+      margin-top: 30px;
+    }
+    .bottom-top-top ul li a .p-5 {
+      width: 16px;
+      height: 20px;
+      background: url("./mi-image/m5.png");
+      position: absolute;
+      margin-left: -155px;
+      margin-top: 30px;
+    }
+    .bottom-top-bottom h5 {
+      float: left;
+      margin-top: 42px;
+      margin-right: 75px;
+      padding-right: 20px;
+      color: #424242;
+    }
+    .bottom-top-bottom ul {
+      float: left;
+      margin-top: 15px;
+      margin-right: 99px;
+    }
+    .bottom-top-bottom ul li {
+      width: 50px;
+      height: 32px;
+      line-height: 32px;
+    }
+    .bottom-top-bottom ul li a {
+      font-size: 12px;
+      color: #757575;
+      text-decoration: none;
+    }
+    .bottom-top-bottom ul li a:hover {
+      color: #ff6709;
+    }
+    .bottom-top-bottom .tel {
+      float: right;
+      width: 250px;
+      height: 112px;
+      border-left: 1px solid #e0e0e0;
+      margin-top: -15px;
+      text-align: center;
+      padding-left: 20px;
+    }
+    .tel h2 {
+    color: #ff6709;
+    }
+    .tel p {
+      color: #616161;
+      font-size: 12px;
+      margin-top: 4px;
+      margin-bottom: 2px;
+    }
+    .tel input {
+      width: 118px;
+      height: 28px;
+      border: 2px solid #ff6709;
+      font-size: 10px;
+      color: #ff6709;
+      background: #ffffff;
+      margin-top: 15px;
+    }
+    .tel input:hover {
+      background: #ff6709;
+      color: white;
+    }
+    .bottom-bottom {
+      width: 1226px;
+      height: 165px;
+      margin: 0 auto;
+      margin-top: 30px;
+    }
+    .bottom-bottom .bottom-bottom-left {
+      width: 56px;
+      height: 57px;
+      background: url("./mi-image/min.png");
+      float: left;
+    }
+    .bottom-bottom-center {
+      float: left;
+    }
+    .bottom-bottom-center ul li {
+      float: left;
+      height: 20px;
+      line-height: 20px;
+    }
+    .bottom-bottom-center ul li a {
+      font-size: 12px;
+      color: #757575;
+      text-decoration: none;
+      border-right: 1px solid #ceb0ce;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .bottom-bottom-center ul li .spec-5 {
+      border-right: none;
+    }
+    .bottom-bottom-center ul li a:hover {
+      color: #ff6709;
+    }
+    .bottom-bottom-center p {
+      float: left;
+      font-size: 11px;
+      color: #b0b0b0;
+      margin-left: 5px;
+      height: 16px;
+      line-height: 16px;
+    }
+    .bottom-bottom-center p a {
+      color: #b0b0b0;
+      text-decoration: none;
+    }
+    .bottom-bottom-center p a:hover {
+      color: #ff6709;
+    }
+    .bottom-bottom-right {
+      float: right;
+      width: 366px;
+      height: 28px;
+      background: url("./mi-image/mi4.png");
+      cursor: pointer;
+    }
+    .bottom-bottom h1 {
+      color: red;
+      width: 1226px;
+      padding-top: 115px;
+      text-align: center;
+    }
+    </style>
+  </head>
+  <body>
+  <div class="daohang">
+    <div class="box">
+      <div class="box-left">
+    <ul>
+      <li><a href="#">小米商城</a><i>|</i></li>
+      <li><a href="#">MIUI</a><i>|</i></li>
+      <li><a href="#">米聊</a><i>|</i></li>
+      <li><a href="#">游戏</a><i>|</i></li>
+      <li><a href="#">多看阅读</a><i>|</i></li>
+      <li><a href="#">云服务</a><i>|</i></li>
+      <li><a href="#">金融</a><i>|</i></li>
+      <li><a href="#">小米网移动版</a><i>|</i></li>
+      <li><a href="#">问题反馈</a><i>|</i></li>
+      <li><a href="#">Select&nbsp;Region</a></li>
+    </ul>
+      </div>
+    <div class="box-right">
+      <ul>
+        <li><a href="#">登录</a><i>|</i></li>
+        <li class="zhuce"><a href="#">注册</a></li>
+        <li class="shop"><a href="#">购物车(0)</a><span class="iconfont shop-color">&#xe654;</span></li>
+      </ul>
+    </div>
+  </div>
+  </div>
+  <div class="top clearfix">
+    <div class="top-left"></div>
+    <div class="top-center">
+      <ul>
+        <li><a href="#">小米手机</a></li>
+        <li><a href="#">红米</a></li>
+        <li><a href="#">平板.笔记本</a></li>
+        <li><a href="#">电视</a></li>
+        <li><a href="#">盒子.影音</a></li>
+        <li><a href="#">路由器</a></li>
+        <li><a href="#">智能硬件</a></li>
+        <li><a href="#">服务</a></li>
+        <li><a href="#">社区</a></li>
+      </ul>
+    </div>
+    <div class="top-right">
+      <input class="text" type="text" name="name" value="">
+      <input class="button" type="button" name="name" value="">
+      <div class="window-1"><a href="#">红米pro</a></div>
+      <div class="window-2"><a href="#">小米笔记本Air</a></div>
+      <div class="find"></div>
+    </div>
+  </div>
+  <div class="banner clearfix">
+    <div class="banner-left">
+      <ul>
+        <li><a href="#">手机&nbsp;电话卡</a><i>&gt;</i></li>
+        <li><a href="#">笔记本&nbsp;平板</a><i>&gt;</i></li>
+        <li><a href="#">电视&nbsp;盒子</a><i>&gt;</i></li>
+        <li><a href="#">路由器&nbsp;智能硬件</a><i>&gt;</i></li>
+        <li><a href="#">移动电源&nbsp;电池&nbsp;插线板</a><i>&gt;</i></li>
+        <li><a href="#">耳机&nbsp;音箱</a><i>&gt;</i></li>
+        <li><a href="#">保护套&nbsp;贴膜</a><i>&gt;</i></li>
+        <li><a href="#">线材&nbsp;支架&nbsp;存储卡</a><i>&gt;</i></li>
+        <li><a href="#">箱包&nbsp;服饰</a><i>&gt;</i></li>
+        <li><a href="#">米兔&nbsp;生活周边</a><i>&gt;</i></li>
+      </ul>
+    </div>
+    <div class="banner-right"></div>
+  </div>
+  <div class="banner-bottom clearfix">
+  <div class="banner-bottom-left">
+    <ul>
+      <li><a href="#"><i class="p-1"></i><span>选购手机</span></a></li>
+      <li><a href="#"><i class="p-2"></i><span>企业团购</span></a></li>
+      <li class="spec-1"><a href="#"><i class="p-3"></i><span>官翻产品</span></a></li>
+      <li class="spec-2"><a href="#"><i class="p-4"></i><span>小米移动</span></a></li>
+      <li class="spec-2"><a href="#"><i class="p-5"></i><span>以旧换新</span></a></li>
+      <li class="spec-3"><a href="#"><i class="p-6"></i><span>话费充值</span></a></li>
+    </ul>
+    <div class="empty-box-1"></div>
+    <div class="empty-box-2"></div>
+  </div>
+  <div class="banner-bottom-pic">
+    <div class="banner-bottom-pic-1"></div>
+    <div class="banner-bottom-pic-2"></div>
+    <div class="banner-bottom-pic-3"></div>
+  </div>
+  </div>
+  <div class="guanggao clearfix">
+    <div class="guanggao-top">
+      <h3>小米明星单品
+      <input class="lt" type="button" name="name" value="&lt;">
+      <input class="gt" type="button" name="name" value="&gt;">
+      </h3>
+    </div>
+    <div class="guanggao-bottom">
+      <div class="guanggao-bottom-box1">
+        <div class="guanggao-bottom-pic1"></div>
+        <i>小米电视3S&nbsp;43英寸</i>
+        <span>全金属旗舰,液晶屏幕</span>
+        <p>1799元</p>
+      </div>
+      <div class="guanggao-bottom-box2">
+        <div class="guanggao-bottom-pic2"></div>
+        <i>小米盒子3&nbsp;增强版</i>
+        <span>高端&nbsp;4K&nbsp;网络机顶盒</span>
+        <p>399元</p>
+      </div>
+      <div class="guanggao-bottom-box3">
+        <div class="guanggao-bottom-pic3"></div>
+        <i>小米手环&nbsp;2</i>
+        <span>每天早上10点开售</span>
+        <p>149元</p>
+      </div>
+      <div class="guanggao-bottom-box4">
+        <div class="guanggao-bottom-pic4"></div>
+        <i>米家&nbsp;LED&nbsp;智能台灯</i>
+        <span>无可视频闪,亮度色温无级调节</span>
+        <p>169元</p>
+      </div>
+      <div class="guanggao-bottom-box5">
+        <div class="guanggao-bottom-pic5"></div>
+        <i>小米空气净化器2</i>
+        <span>10分钟,房间空气焕然一新</span>
+        <p>699元</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="topic clearfix">
+    <h3>智能硬件
+    <i>查看全部
+    <p>&gt;</p>
+    </i>
+    </h3>
+    <div class="topic-left"></div>
+    <div class="topic-right">
+      <div class="topic-right-box1"><div class="pic-1"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box2"><div class="pic-2"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box3"><div class="pic-3"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box4"><div class="pic-4"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box5"><div class="pic-5"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box6"><div class="pic-6"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box7"><div class="pic-7"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+      <div class="topic-right-box8"><div class="pic-8"></div>
+      <i>小米电视3S&nbsp;43英寸</i>
+      <span>全金属旗舰,液晶屏幕</span>
+      <p>1799元</p>
+    </div>
+
+    </div>
+  </div>
+  <div class="bottom">
+    <div class="bottom-top">
+      <div class="bottom-top-top clearfix">
+        <ul>
+          <li><a href="#">1小时快修服务<i class="p-1"></i></a></li>
+          <li><a href="#">7天无理由退货<i class="p-2"></i></a></li>
+          <li><a href="#">15天免费换货<i class="p-3"></i></a></li>
+          <li><a href="#">满150元包邮<i class="p-4"></i></a></li>
+          <li><a class="spec-4" href="#">520余家售后网点<i class="p-5"></i></a></li>
+        </ul>
+      </div>
+      <div class="bottom-top-bottom">
+        <h5>帮助中心</h5>
+        <h5>服务支持</h5>
+        <h5>线下门店</h5>
+        <h5>关于小米</h5>
+        <h5>关注我们</h5>
+        <h5>特色服务</h5>
+        <div class="clearfix">
+        <ul>
+          <li><a href="#">账户管理</a></li>
+          <li><a href="#">购物指南</a></li>
+          <li><a href="#">订单操作</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">售后政策</a></li>
+          <li><a href="#">自助服务</a></li>
+          <li><a href="#">相关下载</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">小米之家</a></li>
+          <li><a href="#">服务网点</a></li>
+          <li><a href="#">零售网点</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">了解小米</a></li>
+          <li><a href="#">加入小米</a></li>
+          <li><a href="#">联系我们</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">新浪微博</a></li>
+          <li><a href="#">小米部落</a></li>
+          <li><a href="#">官方微信</a></li>
+        </ul>
+        <ul>
+          <li><a href="#">F码通道</a></li>
+          <li><a href="#">小米移动</a></li>
+          <li><a href="#">防伪查询</a></li>
+        </ul>
+        <div class="tel">
+          <h2>400-100-5678</h2>
+          <p>周一至周日&nbsp;8:00-18:00</p>
+          <p>(&nbsp;仅收市话费&nbsp;)</p>
+          <input type="button" name="name" value="24小时在线客服">
+        </div>
+      </div>
+
+      </div>
+    </div>
+    <div class="bottom-bottom">
+      <div class="bottom-bottom-left"></div>
+      <div class="bottom-bottom-center">
+        <ul>
+          <li><a href="#">小米商城</a></li>
+          <li><a href="#">MIUI</a></li>
+          <li><a href="#">米聊</a></li>
+          <li><a href="#">多看书城</a></li>
+          <li><a href="#">小米路由器</a></li>
+          <li><a href="#">视频电话</a></li>
+          <li><a href="#">小米后院</a></li>
+          <li><a href="#">小米天猫店</a></li>
+          <li><a href="#">小米淘宝直营店</a></li>
+          <li><a href="#">小米网盟</a></li>
+          <li><a href="#">问题反馈</a></li>
+          <li><a class="spec-5" href="#">Select&nbsp;Region</a></li>
+        </ul>
+        <p>©<a href="">mi.com</a> 京ICP证110507号 京ICP备10046444号 <a href="">京公网安备11010802020134号</a> <a href="">京网文[2014]0059-0009号</a>
+</br>违法和不良信息举报电话：185-0130-1238，本网站所列数据，除特殊说明，所有数据均出自我司实验室测试</p>
+      </div>
+      <div class="bottom-bottom-right"></div>
+      <h1 class="clearfix">探索黑科技,我,为发烧而生!</h1>
+    </div>
+  </div>
+  </body>
+</html>

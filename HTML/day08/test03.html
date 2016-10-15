@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>精灵图的使用</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f {
+         width: 77px;
+         height: 15px;
+         margin: 10px auto;
+         border: 1px solid red;
+         /*精确的去确定精灵图的位置, 关键就是x,y轴的值*/
+         background: url("./image/taobao.png")  -147px -68px;
+       }
+
+       .f1 {
+         width: 41px;
+         height: 20px;
+         border: 1px solid green;
+         margin: 10px auto;
+         background: url("./image/taobao.png") 0px -97px;
+       }
+    </style>
+  </head>
+  <body>
+    <div class="f"></div>
+    <div class="f1"></div>
+
+  </body>
+</html>

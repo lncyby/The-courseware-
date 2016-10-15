@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>拖动条</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body,html{
+            height: 100%;
+        }
+        .box{
+            height: 500px;
+            width: 400px;
+            border: 1px solid red;
+            margin: 100px auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .content{
+            width: 400px;
+            float: left;
+            position: absolute;
+            top: 0;
+            left: 0;
+            -moz-user-select:none;
+            -webkit-user-select:none;
+            user-select:none;
+        }
+        .long{
+            width: 25px;
+            height: 100%;
+            background-color: purple;
+            float: right;
+            position: relative;
+        }
+        .tiao{
+            width: 100%;
+            background-color: red;
+            border-radius: 10px;
+            position: absolute;
+            top: 0;
+            right: 0;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="box-id">
+        <div class="content" id="content-id">
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+          日本首相安倍晋三结束联合国和古巴之行，２３日乘专机回国。不料，专机
+          出问题，安倍一行被迫转乘备用机。日本时事社援引日本政府方面的消息报
+          道，专机撞上了鸟，机体出现问题。在专机预定降落并加油的美国旧金山，
+          安倍与随行人员登上备用飞机。。
+
+
+        </div>
+        <div class="long" id="long-id">
+            <div class="tiao" id="tiao-id"></div>
+        </div>
+    </div>
+    <script>
+        var box = document.getElementById("box-id");
+        var content = document.getElementById("content-id");
+        var long = document.getElementById("long-id");
+        var tiao = document.getElementById("tiao-id");
+        var conhei = content.offsetHeight;
+        var height = box.offsetHeight;
+        var lang = height / (conhei / height);
+        tiao.style.height = lang + "px";
+        tiao.onmousedown = function (event) {
+            document.onmousemove = function (event) {
+                var pageY = event.pageY || event.clientY + scroll().top;
+                console.log(pageY);
+                var offsetY = pageY - box.offsetTop - tiao.offsetHeight / 2;
+                console.log(box.offsetTop,offsetY);
+                if (offsetY <= 0){
+                    offsetY = 0;
+                }else if (offsetY >= box.offsetHeight - tiao.offsetHeight){
+                    offsetY = box.offsetHeight - tiao.offsetHeight;
+                }
+                tiao.style.top = offsetY + "px";
+                console.log(offsetY);
+                var percent = offsetY / height;
+                var yidong = conhei * percent;
+                content.style.top = "-" + yidong + "px";
+            }
+            document.onmouseup = function () {
+                document.onmousemove = null;
+            }
+        }
+    </script>
+</body>
+</html>

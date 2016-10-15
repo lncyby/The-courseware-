@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>offsetWidth and offsetHeight</title>
+    <style media="screen">
+      div {
+        width: 600px;
+        height: 400px;
+        margin: 100px auto 0;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img src="./image/width_height.jpg" alt="">
+    </div>
+
+    <script type="text/javascript">
+      var cr = document.getElementById("container");
+
+      // offsetWidth: 返回元素的宽度
+      console.log("container's width:", cr.offsetWidth);
+      // offsetHeight: 返回元素的高度
+      console.log("container's height:", cr.offsetHeight);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>队列方法</title>
+  </head>
+  <body>
+
+    <script>
+      // 先进先出，First-In-First-Out
+      var a = new Array();
+      a.push(1, 2, 3); // 从数组末端添加项
+      console.log(a) // [1, 2, 3]
+
+      console.log(a.shift()); // 从数组始端移除项
+      console.log(a); // [2, 3]
+
+      console.log("---------------------");
+
+      var b = new Array();
+      b.unshift(1, 2, 3); // 从数组始端添加项
+      b.unshift(4);
+      console.log(b);
+
+      console.log(b.pop()); // 从数组末端移除项
+      console.log(b);
+    </script>
+
+  </body>
+</html>

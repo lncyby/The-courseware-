@@ -1,0 +1,39 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        float: left;
+        margin-left: 50px;
+      }
+      #div-1{
+        /* 盒子的宽实际为：500px + border*2 + padding*2
+           盒子的高实际为：300px + border*2 + padding*2 */
+        width: 500px;
+        height: 300px;
+        box-sizing: content-box;
+        border: 15px solid silver;
+        padding: 15px;
+      }
+      #div-2{
+        /* 盒子的宽高已固定为500px 300px，增加border和padding会减少内容区域的面积 */
+        width: 500px;
+        height: 300px;
+        box-sizing: border-box;
+        border: 15px solid silver;
+        padding: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1">
+      content-box, box-sizing的默认值，500px 300px设置的是内容区域的宽高
+    </div>
+    <div id="div-2">
+      border-box, 500px 300px设置的是包括border以及padding的盒子大小
+    </div>
+  </body>
+</html>

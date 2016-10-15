@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 1000px;
+        box-shadow: 0 0 10px black;
+        margin: 50px auto 0;
+      }
+      ul{
+        list-style: none;
+        padding: 0;
+        display: flex;
+      }
+      ul li{
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+
+      .flex-start ul{
+        justify-content: flex-start;
+      }
+      .flex-end ul{
+        justify-content: flex-end;
+      }
+      .center ul{
+        justify-content: center;
+      }
+      .space-between ul{
+        justify-content: space-between;
+      }
+      .space-around ul{
+        justify-content: space-around;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-start">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="flex-end">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="center">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="space-between">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="space-around">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+  </body>
+</html>

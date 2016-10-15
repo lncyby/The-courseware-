@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>随机产生颜色</title>
+    <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 400px;
+      height: 400px;
+      background-color: black;
+      margin: 50px auto;
+    }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box-id"></div>
+    <script>
+        var box = document.getElementById("box-id");
+        var r = Math.floor(Math.random()*255);
+        var g = Math.floor(Math.random()*255);
+        var b = Math.floor(Math.random()*255);
+        box.onmouseover = function () {
+
+            box.style.backgroundColor = "rgb(" + r + "," + g + "," + b + ")";
+
+
+          };
+    </script>
+  </body>
+</html>

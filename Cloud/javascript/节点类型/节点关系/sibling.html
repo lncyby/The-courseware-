@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>previousSibling and nextSibling</title>
+  </head>
+  <body>
+
+    <div>
+      <ul id="ul-id">
+        <li>我是第一个li</li>
+        <li>我是第二个li</li>
+        <li>我是第三个li</li>
+        <li>我是第四个li</li>
+        <li>我是第五个li</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var ulId = document.getElementById("ul-id");
+
+      var firstChild = ulId.children[0];
+      var secondChild = firstChild.nextSibling; // 包含文本节点
+      console.log(secondChild); // #text
+      var childTwo = firstChild.nextElementSibling;
+      console.log(childTwo); // <li>我是第二个li</li>
+
+      // previousSibling and previousElementSibling 顾名思义 
+    </script>
+
+  </body>
+</html>

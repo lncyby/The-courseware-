@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>伪类选择符</title>
+    <style media="screen">
+      p:nth-child(1) {
+        color: rgb(217, 83, 131);
+      }
+      p:nth-child(3) {
+        /* 不会命中任何元素，第三个子元素为span */
+        /* E:nth-child(n)会命中父元素的第n个子元素，如果第n个子元素不为E，
+        则选择符无效 */
+        color: rgb(147, 214, 104);
+      }
+      p:nth-child(4) {
+        color: rgb(134, 204, 174);
+      }
+
+      /* 命中奇数行 */
+      /*tr:nth-child(2n-1) {
+        background-color: rgb(167, 99, 215);
+      }
+      tr:nth-child(odd) {
+        background-color: rgb(167, 99, 215);
+      }*/
+      /* 命中偶数行 */
+      /*tr:nth-child(2n) {
+        background-color: rgb(90, 203, 110);
+      }
+      tr:nth-child(even) {
+        background-color: rgb(52, 198, 163);
+      }*/
+    </style>
+  </head>
+  <body>
+    <p>我是第一个子元素，第一个p元素</p>
+    <p>我是第二个子元素，第二个p元素</p>
+    <span>我是第三个子元素，第一个span元素</span>
+    <p>我是第四个子元素，第四个p元素</p>
+    <h2>下面是一个表格</h2>
+    <table>
+      <tr>
+        <th>我是表头</th>
+        <th>我是表头</th>
+        <th>我是表头</th>
+      </tr>
+      <tr>
+        <td>第二行第一列</td>
+        <td>第二行第二列</td>
+        <td>第二行第三列</td>
+      </tr>
+      <tr>
+        <td>第三行第一列</td>
+        <td>第三行第二列</td>
+        <td>第三行第三列</td>
+      </tr>
+    </table>
+  </body>
+</html>

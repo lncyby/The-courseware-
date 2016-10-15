@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>cloneNode</title>
+  </head>
+  <body>
+
+    <div>
+      <ul id="ul-id">
+        <li>我是第一个li</li>
+        <li>我是第二个li</li>
+        <li>我是第三个li</li>
+        <li>我是第四个li</li>
+        <li>我是第五个li</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var ulId = document.getElementById("ul-id");
+
+      // 参数为false时，执行浅复制，只复制节点本身
+      var shallowCopy = ulId.cloneNode(false);
+      console.log(shallowCopy); // <ulid="ul-id"></ul>
+
+      // 参数为true时，执行深复制，复制节点及其子节点树
+      var deepCopy = ulId.cloneNode(true);
+      console.log(deepCopy);
+
+      // 复制后返回的节点副本属于文档所有，但并没有为它指定父节点
+    </script>
+
+  </body>
+</html>

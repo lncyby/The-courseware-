@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 1000px;
+        box-shadow: 0 0 10px black;
+        margin: 50px auto 0;
+      }
+      ul{
+        padding: 0;
+        list-style: none;
+        display: flex;
+      }
+      ul li{
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        text-align: center;
+        line-height: 200px;
+        font-size: 100px;
+      }
+      /* flex-direction属性（容器属性）定义主轴的方向 */
+      .row ul{
+        /* 主轴为水平方向，起点在左端 */
+        flex-direction: row;
+      }
+      .row-reverse ul{
+        /* 主轴为水平方向，起点在右端 */
+        flex-direction: row-reverse;
+      }
+      .column ul{
+        /* 主轴为垂直方向，起点在顶端 */
+        flex-direction: column;
+      }
+      .column-reverse ul{
+        /* 主轴为锤子方向，起点在底端 */
+        flex-direction: column-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="row">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="row-reverse">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="column">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+    <div class="column-reverse">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+      </ul>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+      // Boolean类型只有true和false两个字面值，且true和false两个字面值的字母全部为小写
+      var True = true;
+      var False = false;
+      console.log(True);
+      console.log(False);
+
+      console.log("----------Boolean()----------");
+      // 转型函数Boolean()可以将所有数据类型的对象转换为Boolean值
+      var s = "hello world";
+      var num = 10;
+      var a = null;
+      console.log(Boolean(True));
+      console.log(Boolean(s)); // 非空字符串返回true
+      console.log(Boolean(num)); // 非零数值返回true，包括负数，0和NaN返回false
+      console.log(Boolean(a)); // 任何对象都返回true，null则返回false
+      // undefined返回false
+
+      // s被隐式转换为Boolean值
+      if (s){
+        console.log("非空字符串为真");
+      }
+    </script>
+  </body>
+</html>

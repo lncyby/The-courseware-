@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>更改body背景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            background: url("./image/baidu/1.jpg") no-repeat top center;
+            background-size: cover;
+        }
+
+        .box {
+            height: 150px;
+            text-align: center;
+            margin: 50px auto;
+        }
+
+        .box img {
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box">
+    <img id="img-1" src="./image/baidu/1.jpg" alt="">
+    <img id="img-2" src="./image/baidu/2.jpg" alt="">
+    <img id="img-3" src="./image/baidu/3.jpg" alt="">
+    <img id="img-4" src="./image/baidu/4.jpg" alt="">
+    <img id="img-5" src="./image/baidu/5.jpg" alt="">
+</div>
+
+<script>
+    var  img1 = document.getElementById("img-1");
+    var  img2 = document.getElementById("img-2");
+    var  img3 = document.getElementById("img-3");
+    var  img4 = document.getElementById("img-4");
+    var  img5 = document.getElementById("img-5");
+
+    img1.onclick = function () {
+        document.body.style.backgroundImage = "url(./image/baidu/1.jpg)";
+    };
+    img2.onclick = function () {
+        document.body.style.backgroundImage = "url(./image/baidu/2.jpg)";
+    };
+    img3.onclick = function () {
+        document.body.style.backgroundImage = "url(./image/baidu/3.jpg)";
+    };
+    img4.onclick = function () {
+        document.body.style.backgroundImage = "url(./image/baidu/4.jpg)";
+    };
+
+    img5.onclick = function () {
+        document.body.style.backgroundImage = "url(./image/baidu/5.jpg)";
+    };
+
+</script>
+
+</body>
+</html>

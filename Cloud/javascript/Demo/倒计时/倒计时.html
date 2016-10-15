@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>倒计时</title>
+    <style media="screen">
+      div {
+        width: 600px;
+        height: 100px;
+        background-color: rgb(61, 178, 226);
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        margin-left: -50px;
+      }
+      p {
+        font-size: 30px;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <p id="time"></p>
+    </div>
+
+    <script type="text/javascript">
+      var time = document.getElementById("time");
+      var end = new Date("2016-11-10 24:0:0");
+
+      function flag(arg) {
+        return arg > 9 ? arg : "0" + arg;
+      }
+
+      var timer = setInterval(getTime, 1000);
+      function getTime() {
+        var now = new Date();
+        var secs = parseInt((end.getTime() - now.getTime()) / 1000);
+
+        if (secs == 0) {
+          clearInterval(timer);
+        }
+        var sec = parseInt(secs % 60);
+        var min = parseInt(secs / 60 % 60);
+        var hour = parseInt(secs / 3600 % 24)
+        var day = parseInt(secs / 3600 / 24);
+        time.innerHTML = "距离抢购事件仅剩：" + flag(day) + "天" + flag(hour) + "时"
+                         + flag(min) + "分" + flag(sec) + "秒";
+      }
+    </script>
+  </body>
+</html>

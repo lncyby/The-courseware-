@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>输入框提示</title>
+    <style media="screen">
+      body {
+        margin: 0;
+        padding: 0;
+      }
+      span {
+        display: inline-block;
+        width: 200px;
+        height: 20px;
+        border: 1px solid gray;
+        text-align: center;
+        line-height: 20px;
+        position: absolute;
+        top: 3px;
+        left: 230px;
+      }
+      .right {
+        background: url("./image/right.png") no-repeat 5px center;
+        color: rgb(104, 183, 85);
+      }
+      .wrong {
+        background: url("./image/wrong.png") no-repeat 5px center;
+        color: rgb(239, 145, 62);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      语文：<input type="text" id="score">
+      <span id="prompt">请输入语文成绩</span>
+    </div>
+
+    <script type="text/javascript">
+      var score = document.getElementById("score");
+      var prompt = document.getElementById("prompt");
+
+      // 元素失去焦点时触发blur事件
+      score.onblur = function () {
+        if (this.value == "") {
+          prompt.innerHTML = "请输入分数！";
+          prompt.className = "wrong";
+        } else if (isNaN(this.value)) {
+          prompt.innerHTML = "请输入正确的分数！";
+          prompt.className = "wrong";
+        } else if (this.value < 0 || this.value > 100) {
+          prompt.innerHTML = "分数范围：0~100";
+          prompt.className = "wrong";
+        } else {
+          prompt.innerHTML = "分数有效";
+          prompt.className = "right";
+        }
+        
+        this.value = "";
+      }
+    </script>
+
+  </body>
+</html>

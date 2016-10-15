@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>表单</title>
+  </head>
+  <body>
+
+    <form action="xx/xxx.cgi" method="get" name="form1" >
+      <fieldset>
+        <legend>个人信息</legend>
+        姓名：  <input type="text" name="name" readonly="readonly" value="张三"><br/><br/>
+        密码：  <input type="password" name="passwd" maxlength="6"><br/><br/>
+        性别：  <input type="radio" name="gender" value="1">男
+        <input type="radio" name="gender" value="2">女
+        <input type="radio" name="gender" value="3">保密<br/><br/>
+
+        爱好：  <input type="checkbox" name="hobby1" checked="checked">睡觉
+        <input type="checkbox" name="hobby2" checked>躺着睡觉
+        <input type="checkbox" name="hobby3">趴着睡觉
+        <input type="checkbox" name="hobby4">上课睡觉<br/><br/>
+        隐藏：  <input type="hidden">  <br/><br/>
+      </fieldset>
+
+    <fieldset>
+      <legend>其他</legend>
+    <input type="file" name="filename"><br/><br/>
+    多行文本：
+    <textarea rows="5" cols="30" name="textarea">
+    </textarea><br/><br/>
+
+    菜谱：
+    <select name="food"  size="1" multiple="multiple">
+      <option value="1" >土豆丝</option>
+      <option value="2" selected="selected">酸辣土豆丝</option>
+      <option value="3" >醋溜土豆丝</option>
+    </select><br/><br/>
+    </fieldset>
+
+    <input type="submit" value="登陆" disabled="disabled">
+    <input type="reset" value="退出">
+    <input type="button" value="我是button"><br/><br/>
+    <input type="image" src="./0.jpg">
+
+    </form>
+
+  </body>
+</html>

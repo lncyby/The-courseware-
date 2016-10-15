@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>位移</title>
+    <style>
+      .container{
+        width: 300px;
+        height: 150px;
+        border: 3px solid silver;
+        float: left;
+        margin: 50px 0 0 50px;
+      }
+      .container div{
+        width: 300px;
+        height: 150px;
+        background-color: #50b7c1;
+        transition: all 0.5s linear;
+      }
+      #div-1:hover{
+        transform: translateX(50px);
+      }
+      #div-2:hover{
+        transform: translateX(-50px);
+      }
+      #div-3:hover{
+        transform: translate(50px, 50px);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="div-1"></div>
+    </div>
+    <div class="container">
+      <div id="div-2"></div>
+    </div>
+    <div class="container">
+      <div id="div-3"></div>
+    </div>
+  </body>
+</html>

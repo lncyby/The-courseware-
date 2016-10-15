@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      .clock{
+        width: 800px;
+        height: 800px;
+        margin: 50px auto 0;
+        background-color: white;
+        border: 15px solid silver;
+        border-radius: 400px;
+        position: relative;
+      }
+      .clock-s{
+        width: 700px;
+        height: 700px;
+        background-color: white;
+        border-radius: 350px;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
+      .clock > ul li{
+        width: 10px;
+        height: 800px;
+        background-color: silver;
+        position: absolute;
+        top: 0;
+        left: 400px;
+      }
+      .clock > ul li:nth-child(1){
+        width: 15px;
+      }
+      .clock > ul li:nth-child(2){
+        transform: rotate(30deg);
+      }
+      .clock > ul li:nth-child(3){
+        transform: rotate(60deg);
+      }
+      .clock > ul li:nth-child(4){
+        width: 15px;
+        transform: rotate(90deg);
+      }
+      .clock > ul li:nth-child(5){
+        transform: rotate(120deg);
+      }
+      .clock > ul li:nth-child(6){
+        transform: rotate(150deg);
+      }
+
+      .clock-s > ul{
+        width: 50px;
+        height: 50px;
+        background-color: black;
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        left: 50%;
+        margin-left: -25px;
+      }
+      .clock-s > ul li{
+        position: absolute;
+      }
+      .clock-s > ul li:nth-child(1){
+        width: 20px;
+        height: 150px;
+        background-color: black;
+        top: -125px;
+        left: 15px;
+        animation-name: hands;
+        animation-duration: 43200s;
+        animation-timing-function: linear ;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+      }
+      .clock-s > ul li:nth-child(2){
+        width: 15px;
+        height: 200px;
+        background-color: black;
+        top: -175px;
+        left: 17.5px;
+        animation-name: hands;
+        animation-duration: 3600s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+      }
+      .clock-s > ul li:nth-child(3){
+        width: 10px;
+        height: 250px;
+        background-color: black;
+        top: -225px;
+        left: 20px;
+        animation-name: hands;
+        animation-duration: 60s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        transform-origin: bottom;
+      }
+      @keyframes hands{
+        0%{
+          transform: rotate(0) ;
+        }
+        100%{
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="clock">
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <div class="clock-s">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

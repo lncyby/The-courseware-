@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>获取隐藏元素的元素宽度和高度</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      width: 200px;
+      height: 200px;
+      background: yellow;
+      display: none;
+    }
+  </style>
+  <body>
+    <div class="box" id="box"></div>
+    <script>
+        function  getsize(id) {
+            var boxid = document.getElementById(id);
+            var vis = boxid.style.visibility;
+            var dis = boxid.style.display;
+            boxid.setAttribute("style","visibility:hidden;display:block !important;");
+            var boxwidth = boxid.offsetWidth;
+            var boxheight = boxid.offsetHeight;
+            boxid.style.visibility = vis;
+            boxid.style.display = dis;
+            return [boxwidth,boxheight];
+
+        }
+        var size = getsize("box");
+        console.log("box的宽为：" + size[0]);
+        console.log("box的高为：" + size[1]);
+    </script>
+  </body>
+</html>

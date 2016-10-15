@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>放大镜</title>
+    <style media="screen">
+      #sc-img {
+        width: 300px;
+        height: 200px;
+        position: absolute;
+        top: 100px;
+        left: 50%;
+        margin-left: -150px;
+      }
+      #sc-img img {
+        width: 300px;
+        height: 200px;
+      }
+      #look {
+        width: 120px;
+        height: 80px;
+        background-color: rgba(238, 175, 240, 0.3);
+        position: absolute;
+        display: none;
+      }
+
+      #bc-img {
+        width: 480px;
+        height: 320px;
+        position: absolute;
+        top: 350px;
+        left: 50%;
+        margin-left: -240px;
+        overflow: hidden;
+      }
+      #b-img {
+        position: absolute;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="sc-img">
+      <img src="./image/9.jpg" alt="">
+      <div id="look"></div>
+    </div>
+    <div id="bc-img">
+      <img id="b-img" src="./image/9.jpg" alt="">
+    </div>
+
+    <script type="text/javascript">
+      var scImg = document.getElementById("sc-img");
+      var look = document.getElementById("look");
+      var  bcImg= document.getElementById("bc-img");
+      var bImg = document.getElementById("b-img");
+
+      // 封装显示功能和隐藏功能函数
+      function show(obj) {
+        obj.style.display = "block";
+      }
+      function hidden(obj) {
+        obj.style.display = "none";
+      }
+
+      scImg.onmouseover = function () {
+        show(look);
+        show(bImg)
+        // 改变指针样式
+        this.style.cursor = "move";
+      }
+      scImg.onmouseout = function () {
+        hidden(look);
+        hidden(bImg)
+      }
+
+      scImg.onmousemove = function (event) {
+        // 兼容性代码
+        var x = event.pageX || event.clientX + scroll().left;
+        var y = event.pageY || event.clientY + scroll().top;
+        // 获得指针所处页面的横纵坐标
+        var x = event.pageX;
+        var y = event.pageY;
+
+        // 限制look在scImg的水平方向上跟随指针
+        if (x <= look.offsetWidth / 2 + scImg.offsetLeft) {
+          look.style.left = "0";
+        } else if (x >= scImg.offsetWidth - look.offsetWidth / 2
+                  + scImg.offsetLeft) {
+          look.style.right = "0";
+        } else {
+          look.style.left = x - look.offsetWidth / 2 - scImg.offsetLeft + "px";
+        }
+
+        // 限制look在scImg的垂直方向上跟随指针
+        if (y <= look.offsetHeight / 2 + scImg.offsetTop) {
+          look.style.top = "0";
+        } else if (y >= scImg.offsetHeight - look.offsetHeight / 2
+                  + scImg.offsetTop) {
+          look.style.bottom = "0";
+        } else {
+          look.style.top = y - look.offsetHeight / 2 - scImg.offsetTop + "px";
+        }
+
+        // bImg的偏移系数
+        var scale = (bImg.offsetWidth - bcImg.offsetWidth) /
+                    (scImg.offsetWidth - look.offsetWidth);
+
+        bImg.style.left = -look.offsetLeft * scale + "px";
+        bImg.style.top = -look.offsetTop * scale + "px";
+      };
+
+      // 当对一个元素设置了 display: none; 后，无法获得其offsetWidth
+      // and offsetHeight
+    </script>
+  </body>
+</html>

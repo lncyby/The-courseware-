@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>String</title>
+  </head>
+  <body>
+    <script>
+      var a = "hello";
+      var b = 'world';
+      // 字符串一旦创建，值即不能改变，a + b作为一个新的字符串赋给了a, 无用的字符串都将被销毁
+      a = a + b;
+      console.log(a);
+
+      console.log("----------toString()----------");
+      var age = 25;
+      var c = true;
+      var d = "string";
+      console.log(age.toString()); // 数值类型的对象都包含toString()方法
+      console.log(c.toString()); // 布尔类型的对象都包含toString()方法
+      console.log(d.toString()); // 字符串类型的对象的toString()方法返回该字符串的一个副本
+      // 对象数据类型也有toString()方法，null和undefined数据类型没有此方法
+      var num = 10;
+      console.log(num.toString()); // toString()方法默认以十进制格式返回数值的字符串表示
+      // 可以给toString()方法传递参数，指定其以几进制的格式返回数值的字符串表示
+      console.log(num.toString(2));
+      console.log(num.toString(8));
+      console.log(num.toString(16));
+
+      console.log("----------String()----------");
+      var value1 = "string";
+      var value2 = 10;
+      var value3 = true;
+      var value4 = null;
+      var value5;
+      console.log(String(value1)); // 转型函数String()可以将所有数据类型的对象转换为String类型
+      console.log(String(value2));
+      console.log(String(value3));
+      console.log(String(value4)); // "null"
+      console.log(String(value5)); // "undefined"
+    </script>
+  </body>
+</html>

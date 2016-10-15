@@ -1,0 +1,1179 @@
+<!-- <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"> -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+  <title>京东</title>
+  <link rel="icon" href="jd/favicon.ico">
+  <style media="screen">
+    * {
+      margin: 0px;
+      padding:0px;
+    }
+    i,s {
+      font-style: normal;
+      text-decoration: none;
+    }
+
+    .nav {
+      height: 30px;
+      background: #F1F1F1;
+    }
+
+    .w {
+      width: 1210px;
+      margin:0 auto;
+    }
+
+    .color-red {
+      color: red !important;
+    }
+    .fl {
+      float:left;
+    }
+    .sendto {
+      height: 30px;
+      line-height: 30px;
+
+      /*此处padding-right的值足够大，是为了将来空白部分可以容纳下小三角，不至于让小三角
+      溢出到该盒子外边*/
+      padding: 0  25px  0  10px;
+      position: relative;
+    }
+
+    .sendto i,
+    .sendto-r i {
+      height: 8px;
+      width: 15px;
+      position: absolute;
+      font:16px/16px "宋体";
+      top:13px;
+      right: 2px;
+      overflow: hidden;
+    }
+    .sendto i s,
+    .sendto-r i s {
+      position: absolute;
+      bottom: 2px;
+    }
+
+    .sendto:hover,
+    .sendto-r:hover {
+      background: white;
+    }
+
+    .sendto:hover i s,
+    .sendto-r:hover i s {
+      position: absolute;
+      top:1px;
+    }
+
+    .fr {
+      float: right;
+    }
+
+    ul {
+      list-style: none;
+    }
+
+    a {
+      text-decoration: none;
+      color: black;
+    }
+
+    .clearfix:before, .clearfix:after {
+        content: "";
+        display: table;
+    }
+
+    .clearfix:after {
+        clear: both;
+    }
+
+    .clearfix {
+        *zoom: 1; /*IE/7/6*/
+    }
+    .fr-nav li {
+      font-size:13px;
+      float:left;
+      height: 30px;
+      line-height: 30px;
+      padding:0px 16px;
+      position: relative;
+    }
+
+    .fr-nav a:hover {
+      color: red;
+    }
+
+    /*单独使用fr-nav-line对新添加的li标签设置属性时，会受到之前对li的设置，因此权重不够
+    因此可以在前边加上  .fr-nav 即可*/
+    .fr-nav .fr-nav-line {
+      width: 1px;
+      height: 12px;
+      padding: 0px;
+      margin-top:9px;
+      background: gray;
+    }
+
+    .jd-tel {
+      position: absolute;
+      top:7px;
+      left:4px;
+      width: 11px;
+      height: 16px;
+      background: url("jd/tel.png") no-repeat;
+    }
+
+    .top-banner {
+      background: #8B25C6;
+      height: 80px;
+    }
+
+    /*为了防止直接去修改已经定义好的版心 w， 因此可以重新添加一个新的类即可*/
+    .w-top-banner {
+      position: relative;
+    }
+    .top-banner-close {
+      position: absolute;
+      top: 2px;
+      right: 0px;
+      background: url("jd/close.png") no-repeat ;
+      /*一定在设置背景图片时，设置元素的宽高，因为背景不会撑开元素*/
+      width: 19px;
+      height: 19px;
+    }
+    .top-banner-close:hover {
+      /*background: url("jd/close.png") no-repeat 0px -19px ;*/
+      background: url("jd/close.png") no-repeat bottom ;
+    }
+
+    .search-logo {
+      float: left;
+      width: 362px;
+      /*height: 100px;*/
+      /*由于添加了padding，为了防止盒子变大，需要将height减小*/
+      height: 60px;
+      /*background: pink;*/
+      position: relative;
+
+      /**/
+      padding:20px 0;
+    }
+
+    .search-logo-a {
+      display: block;
+      width: 270px;
+      height: 60px;
+      background: url("jd/jd-logo.png") no-repeat;
+      text-indent: -9999px;
+    }
+    .search-logo-gift {
+      position: absolute;
+      top: 4px;
+      right: 15px;
+      width: 180px;
+      height: 80px;
+      background: url("jd/dong.gif");
+    }
+
+    .search-input {
+      float: left;
+      width: auto;
+      /*height: 60px;*/
+      height: 36px;
+      margin-top:25px;
+      background: yellow;
+    }
+
+    .search-input input {
+      width: 446px;
+      height: 24px;
+      border: 2px solid #B61D1D;
+      padding:4px;
+      float: left;
+      outline-style: none;
+    }
+
+    .search-input  button {
+      width: 80px;
+      height: 36px;
+      float: left;
+      background: #B61D1D;
+      font: 16px/16px "宋体";
+
+      /*button按钮默认有2px的border*/
+      border: 0px;
+      cursor: pointer;/*用来设置鼠标移动到button是的显示*/
+    }
+    .search-car {
+      float:right;
+      /*width: 139px;*/
+      /*height: 34px;*/
+      width: 111px;
+      height: 14px;
+      background: #F9F9F9 ;
+      border: 1px solid #DFDFDF;
+      margin-top: 25px;
+      padding:  10px 10px 10px 18px;
+      position: relative;
+    }
+    .search-car-icon {
+      display: inline-block;
+      width: 18px;
+      height: 14px;
+      background: url("jd/tel-1.png") 0 -59px;
+      float: left;
+    }
+
+    .search-car-text {
+      font-size:13px;
+      float: left;
+      margin-left: 8px;
+    }
+
+    .search-car-text:hover {
+      color: red;
+    }
+
+    .search-car-right {
+      float: right;
+      font-size:13px;
+    }
+
+    .search-car-sup {
+      position: absolute;
+      width: 16px;
+      height: 14px;
+      top: -3px;
+      left: 109px;
+      background: url("jd/jingdong_r4_c12.png");
+      /*border-radius: 5px 5px 5px 0;*/  /*设置边框圆角效果*/
+    }
+
+    .search-more {
+      float: left;
+      width: 500px;
+      height: 20px;
+      margin-top: 5px;
+      font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+      line-height: 20px;
+    }
+
+    .search-more a {
+      margin-right: 8px;
+    }
+    .search-more-first {
+      color: red;
+    }
+
+    .search-more a:hover {
+      color: red;
+    }
+
+    /*在没有给target设置宽度的情况下，为了防止浏览器窗口变窄时
+    让子元素的图片挤压成一列，所以图片使用定位来做*/
+    .footer-top-target {
+      /*height: 54px;
+      padding: 20px 0;*/
+      height: 94px;
+      background: #F5F5F5;
+      position: relative;
+    }
+
+    .footer-top-target span {
+      width: 302px;
+      height: 54px;
+      position: absolute;
+      top: 20px;
+      left: 50%;
+    }
+
+    .footer-top-target-duo {
+      margin-left: -608px;
+    }
+
+    .footer-top-target-kuai{
+      margin-left: -304px;
+    }
+
+    /*.footer-top-target-hao {
+      top: 20px;
+      left: 50%;
+    }
+*/
+    .footer-top-target-sheng{
+      margin-left: 304px;
+    }
+
+    .footer-top-service {
+      margin-top: 15px;
+    }
+
+    .footer-top-service dl {
+      width: 200px;
+      float: left;
+    }
+
+    .footer-top-service  .footer-top-service-last-dl {
+      width: 160px;
+      float: left;
+    }
+
+    .footer-top-service dt {
+      font: 400 16px/24px "microsoft yahei";
+      margin-bottom: 5px;
+    }
+
+    .footer-top-service dd {
+      font: 12px/160% Arial,Verdana,"\5b8b\4f53";
+    }
+
+    .footer-top-service a:hover {
+      color: red;
+    }
+
+    .footer-top-service-map {
+      width: 250px;
+      height: 168px;
+      float: right;
+      background: url("jd/map.png") no-repeat 0  -131px;
+    }
+
+    .footer-top-service-map-title {
+      text-indent: 2em;
+      margin-top: 10px;
+      font: 400 16px/24px "microsoft yahei";
+    }
+
+    .footer-top-service-map-text {
+      font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+      margin-top: 10px;
+      padding:0  40px  0 18px;
+    }
+
+    .footer-top-service-map-text-look {
+      float: right;
+    }
+
+    .footer-bottom-contact {
+      margin-top: 20px;
+      font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+      text-align: center;
+    }
+
+    .footer-bottom-contact a {
+      margin: 0 10px;
+    }
+    .footer-bottom-contact a:hover {
+      color: red;
+    }
+
+    .footer-bottom-link {
+      font: 12px/150% Arial,Verdana,"\5b8b\4f53";
+      text-align: center;
+      margin-top: 12px;
+    }
+
+    .footer-bottom-link a:hover {
+      color: red;
+    }
+
+    .footer-bottom-link img {
+      vertical-align: middle;
+    }
+
+    .footer-bottom-auth {
+      margin-top: 28px;
+      text-align: center;
+    }
+
+    .shoping-nav {
+      height: 44px;
+      border-bottom: 2px solid #B1191A;
+    }
+
+    .shoping-nav-all {
+      float: left;
+      width: 210px;
+      height: 44px;
+      background: #B1191A;
+      position: relative;
+      z-index: 10;
+       /*解决因层级问题被下边的元素压住*/
+    }
+
+    .shoping-nav-all-dropdown a {
+      display: block;
+      height: 44px;
+      line-height: 44px;
+      padding-left: 10px;
+      color: white;
+      font: 400 15px/44px "microsoft yahei";
+    }
+
+    .shoping-nav-all-one {
+      width: 210px;
+      height: 466px;
+      background: #C81623;
+      margin-top: 2px;
+    }
+
+    .shoping-nav-items {
+      width: 630px;
+      height: 44px;
+      float: left;
+    }
+
+    .shoping-nav-items li {
+      float: left;
+    }
+
+    .shoping-nav-items li a {
+      display: block;
+      height: 44px;
+      line-height: 44px;
+      padding:0 20px;
+      font: 400 16px/44px "microsoft yahei";
+    }
+
+    .shoping-nav-items li a:hover {
+      color: red;
+    }
+
+    .shoping-nav-items-li-sup {
+      position: relative;
+    }
+    .shoping-nav-items-li-sup i {
+      position: absolute;
+      width: 36px;
+      height: 18px;
+      top: -1px;
+      right: -13px;
+      background: url("jd/5years.jpeg") no-repeat;
+    }
+
+    .shoping-nav-all-one-link {
+      height: 31px;
+      padding: 0 10px;
+    }
+
+    .shoping-nav-all-one-link:hover {
+      background: white;
+    }
+
+    .shoping-nav-all-one-link:hover h3 a {
+      color: red ;
+    }
+
+    .shoping-nav-all-one-link h3 {
+      float: left;
+      font: 14px Arial,Verdana,"\5b8b\4f53";
+    }
+
+    .shoping-nav-all-one-link h3 a {
+      color: white;
+      line-height: 31px;
+      height: 31px;
+    }
+
+    .shoping-nav-all-one-link  i {
+      float: right;
+      height: 31px;
+      line-height: 31px;
+      color: white;
+    }
+
+    .main-img {
+      width: 730px;
+      height: 454px;
+      margin: 12px 0 0 220px;
+      float: left;
+      position: relative;
+    }
+
+    .main-news {
+      float: right;
+      margin-top: 12px;
+      /*width: 252px;*/
+      width: 253px;
+      height: 453px;
+      /*border: 1px solid #E4E4E4;
+      border-right:none;
+      border-bottom: none;*/
+    }
+
+    .main-img-circle {
+      position: absolute;
+      left: 50%;
+      bottom: 5px;
+      margin-left: -66px;
+    }
+    .main-img-circle li {
+      float:  left;
+      color: white;
+      height: 18px;
+      width: 18px;
+      line-height: 18px;
+      text-align: center;
+      background: #3E3E3E;
+      border-radius: 8px;
+      margin-left: 4px;
+      cursor: pointer;/*移动上去后显示小手*/
+    }
+
+    .main-img-circle .main-img-circle-current {
+      background-color: red;
+    }
+
+    .main-img-arrow-l, .main-img-arrow-r {
+      width: 28px;
+      height: 62px;
+      line-height: 62px;
+      text-align: center;
+      position: absolute;
+      top: 50%;
+      margin-top: -31px;
+      color: #FFF;
+      font:400  22px/62px "simsun";
+      background: rgba(0,0,0,0.3);/*添加透明度， 整个盒子也变透明*/
+    }
+    .main-img-arrow-l {
+      left: 0;
+    }
+    .main-img-arrow-r {
+      right: 0;
+    }
+    .main-img-arrow a:hover {
+      background: rgba(0,0,0,0.6);/*添加透明度， 整个盒子也变透明*/
+    }
+
+    .main-news-top {
+      height: 163px;
+      /*border-bottom: 1px solid #E4E4E4;
+      border-right: 1px solid #E4E4E4;*/
+      border: 1px solid #E4E4E4;
+    }
+
+    .main-news-top-title {
+      height: 32px;
+      padding: 0 15px;
+      border-bottom: 1px dotted  #E4E4E4;
+    }
+
+    .main-news-top-title h3 {
+      font-size: 16px;
+      font: 400 16px/32px "microsoft yahei";
+      height: 32px;
+      line-height: 32px;
+      float: left;
+    }
+
+    .main-news-top-title a {
+      display: block;
+      line-height: 32px;
+      height: 32px;
+      float: right;
+      font: 400 12px/32px "microsoft yahei";
+    }
+    .main-news-top-title a:hover {
+      color: red;
+    }
+
+    .main-news-top-content {
+      height: 130px;
+    }
+
+    .main-news-top-content ul {
+      padding: 10px 0  0 15px;
+    }
+
+    .main-news-top-content li {
+      height: 24px;
+      line-height: 24px;
+      font: 400 12px/150% "microsoft yahei";
+    }
+
+    .main-news-top-content li span {
+      font-weight: 700;
+    }
+
+    .main-news-top-content li a:hover {
+      color: red;
+    }
+
+    .main-news-middle li {
+      height: 70px;
+      width: 62px;
+      float: left;
+      border-right: 1px solid #E4E4E4;
+      border-bottom: 1px solid #E4E4E4;
+    }
+
+   .main-news-middle-li-left {
+     border-left: 1px solid #E4E4E4;
+   }
+
+    .main-news-middle li a {
+      display: block;
+      height: 57px;
+      padding-top:  13px;
+      font: 400 12px/150% "microsoft yahei";
+      text-align: center;
+    }
+
+    .main-news-middle  a i {
+     display: block;
+     margin: 0 auto;
+     width: 25px;
+     height: 25px;
+     margin-bottom: 10px;
+    }
+
+    .main-news-middle a:hover {
+      color: red;
+    }
+
+    .main-news-middle-i-1 {
+     /*width: 19px;
+     height: 24px;*/
+     background: url("jd/service.png") no-repeat -3px 0;
+    }
+
+    .main-news-middle-i-2 {
+     /*width: 23px;
+     height: 23px;*/
+     background: url("jd/service.png") no-repeat -2px -27px ;
+    }
+    .main-news-middle-i-3 {
+     /*width: 23px;
+     height: 23px;*/
+     background: url("jd/service.png") no-repeat  0 -52px ;
+    }
+
+    .main-news-middle-i-4 {
+     background: url("jd/service.png") no-repeat  0 -77px ;
+    }
+
+    .main-news-middle-i-5 {
+     background: url("jd/service.png") no-repeat  -2px -101px ;
+    }
+
+    .main-news-middle-i-6 {
+     background: url("jd/service.png") no-repeat  -1px -126px ;
+    }
+
+    .main-news-middle-i-7 {
+     background: url("jd/service.png") no-repeat  -2px -151px ;
+    }
+
+    .main-news-middle-i-8 {
+     background: url("jd/service.png") no-repeat  -2px -176px ;
+    }
+
+    .main-news-middle-i-9 {
+     background: url("jd/service.png") no-repeat  0px -201px ;
+    }
+
+    .main-news-middle-i-10 {
+     background: url("jd/service.png") no-repeat  -2px -225px ;
+    }
+
+    .main-news-middle-i-11 {
+     background: url("jd/service.png") no-repeat  0px -251px ;
+    }
+
+    .main-news-middle-i-12 {
+     background: url("jd/service.png") no-repeat  0px -277px ;
+    }
+
+    .main-news-bottom {
+      text-align: center;
+    }
+
+    .today-rem {
+      height: 151px;
+      margin: 15px auto 15px;
+    }
+
+    .today-rem-left {
+      float: left;
+      width: 210px;
+    }
+
+    .today-rem-left a {
+      display: block;
+      height: 151px;
+      background: url("jd/homebg.png") no-repeat -213px -135px;
+    }
+
+    .today-rem-right {
+      float:left;
+      height: 161px;
+      width: 1000px; /*加上宽度，保证图片显示在当前盒子中*/
+      overflow:  hidden;
+    }
+
+    .today-rem-right ul {
+      width: 500%;/*为了让添加了margin-right的li浮动之后不会挤下去
+                   一个，让ul足够宽。然后父元素设置 overflow:hidden即可*/
+    }
+
+    .today-rem-right li {
+      float: left;
+      margin-right: 1px;
+    }
+
+  </style>
+</head>
+<body>
+
+<!-- nav  -->
+  <div class="nav">
+    <div class="w">
+      <div class="fl">
+        <div class="sendto">
+          送至:北京
+          <i><s>◇</s></i>
+        </div>
+      </div>
+
+      <div class="fr fr-nav">
+        <ul>
+          <li><a href="#">你好，请登录</a></li>
+          <li class="fr-nav-line"></li>
+          <li><a href="#" class="color-red">免费注册</a></li>
+          <li class="fr-nav-line"></li>
+          <li>我的订单</li>
+          <li class="fr-nav-line"></li>
+          <li class="sendto-r">
+            我的京东
+              <i><s>◇</s></i>
+          </li>
+          <li class="fr-nav-line"></li>
+          <li><a href="#">京东会员</a></li>
+          <li class="fr-nav-line"></li>
+          <li><a href="#">企业采购</a></li>
+          <li class="fr-nav-line"></li>
+          <li class="sendto-r">
+            手机京东
+            <i><s>◇</s></i>
+            <span class="jd-tel"></span>
+          </li>
+          <li class="fr-nav-line"></li>
+          <li class="sendto-r">
+            关注京东
+              <i><s>◇</s></i>
+          </li>
+          <li class="fr-nav-line"></li>
+          <li class="sendto-r">
+            客户服务
+              <i><s>◇</s></i>
+          </li>
+          <li class="fr-nav-line"></li>
+          <li class="sendto-r">
+            网站导航
+              <i><s>◇</s></i>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!--top-banner  -->
+  <div class="top-banner">
+    <div class="w  w-top-banner">
+      <a href="#"><img src="jd/topbanner.jpg" alt=""></a>
+      <a href="javascript:;" class="top-banner-close"></a>
+    </div>
+  </div>
+
+<!--search -->
+  <div class="w serach clearfix">
+    <div class="search-logo">
+      <a href="http://www.jingdong.com" target="_blank" class="search-logo-a">京东</a>
+      <a href="#" class="search-logo-gift"></a>
+    </div>
+    <div class="search-input">
+        <input type="text">
+        <button>搜索</button>
+    </div>
+    <div class="search-car ">
+      <i class="search-car-icon"></i>
+      <a href="#" class="search-car-text">我的购物车</a>
+      <i class=" search-car-sup"></i>
+      <i class="search-car-right">></i>
+    </div>
+    <div class="search-more">
+      <a href="#" class= "search-more-first">小米Max</a>
+      <a href="#">领免息劵</a>
+      <a href="#">精选花卉</a>
+      <a href="#">5周年庆</a>
+      <a href="#">200减120</a>
+      <a href="#">棉麻连衣裙</a>
+      <a href="#">汽车脚垫</a>
+      <a href="#">免费试用</a>
+    </div>
+  </div>
+
+  <!--shoping  -->
+  <div class="shoping-nav">
+    <div class="w">
+      <div class="shoping-nav-all">
+        <div class="shoping-nav-all-dropdown">
+          <a href="#">全部分类</a>
+        </div>
+        <div class="shoping-nav-all-one">
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">家用电器</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">手机、数码、京东通信</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">电脑、办公</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">家居、家具、家装、厨具</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">男装、女装、童装、内衣</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">个护化妆、清洁用品、宠物</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">鞋靴、箱包、珠宝、奢侈品</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">运动户外、钟表</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">汽车、汽车用品</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">母婴、玩具乐器</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">食品、酒类、生鲜、特产</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">医药保健</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">图书、音像、电子书</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">理财、众筹、白条、保险</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+          <div class="shoping-nav-all-one-link">
+            <h3><a href="#">彩票、旅行、充值、票务</a>
+            </h3>
+            <i>&gt;</i>
+          </div>
+        </div>
+      </div>
+      <div class="shoping-nav-items">
+        <ul>
+          <li><a href="#">服装城</a></li>
+          <li><a href="#">美妆馆</a></li>
+          <li><a href="#">超市</a></li>
+          <li><a href="#">全球购</a></li>
+          <li><a href="#">闪购</a></li>
+          <li class="shoping-nav-items-li-sup">
+            <a href="#">团购</a>
+            <i></i>
+          </li>
+          <li><a href="#">拍卖</a></li>
+          <li><a href="#">金融</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+<!--main  -->
+<div class=" w main clearfix">
+  <div class="main-img">
+    <a href="#">
+      <img src="jd/main-img.jpg" alt="">
+    </a>
+    <div class="main-img-circle">
+      <ul>
+        <li class="main-img-circle-current">1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+      </ul>
+    </div>
+    <div class="main-img-arrow">
+      <a href="#" class="main-img-arrow-l">&lt;</a>
+      <a href="#" class="main-img-arrow-r">&gt;</a>
+    </div>
+  </div>
+  <div class="main-news">
+    <div class="main-news-top">
+      <div class="main-news-top-title">
+        <h3>京东快报</h3>
+        <a href="#">更多&nbsp;&gt;</a>
+      </div>
+      <div class="main-news-top-content">
+        <ul>
+          <li><a href="#"><span>[特惠]</span>&nbsp;齐心办公 每满199减80</a></li>
+          <li><a href="#"><span>[公告]</span>&nbsp;CES开幕体验智能京东智慧生活</a></li>
+          <li><a href="#"><span>[特惠]</span>&nbsp;517狂欢 手机爆品517元秒杀</a></li>
+          <li><a href="#"><span>[公告]</span>&nbsp;大连柳州开仓 211限时达扩大</a></li>
+          <li><a href="#"><span>[特惠]</span>&nbsp;京东童书节满200减100</a></li>
+        </ul>
+        </div>
+      </div>
+    <div class="main-news-middle">
+      <ul>
+        <li class="main-news-middle-li-left">
+          <a href="#">
+          <i class="main-news-middle-i-1"></i>
+          <span>话费</span>
+        </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-2"></i>
+            <span>机票<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-3"></i>
+            <span>电影票<span>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-4"></i>
+            <span>游戏<span>
+          </a>
+        </li>
+        <li class="main-news-middle-li-left">
+          <a href="#">
+          <i class="main-news-middle-i-5"></i>
+            <span>彩票<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-6"></i>
+            <span>团购<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-7"></i>
+            <span>酒店<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-8"></i>
+            <span>火车票<span>
+          </a>
+        </li>
+        <li class="main-news-middle-li-left">
+          <a href="#">
+          <i class="main-news-middle-i-9"></i>
+            <span>众筹<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-10"></i>
+            <span>理财<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-11"></i>
+            <span>礼品卡<span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+          <i class="main-news-middle-i-12"></i>
+            <span>白条<span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div class="main-news-bottom">
+      <img src="jd/news-bottom.jpg" alt="" />
+    </div>
+  </div>
+</div>
+
+<!--today recommed -->
+<div class="w today-rem">
+    <div class="today-rem-left">
+      <a href="#"></a>
+    </div>
+    <div class="today-rem-right">
+      <ul>
+        <li><a href="#"><img src="jd/rem.jpg" alt=""></a></li>
+        <li><a href="#"><img src="jd/rem.jpg" alt=""></a></li>
+        <li><a href="#"><img src="jd/rem.jpg" alt=""></a></li>
+        <li><a href="#"><img src="jd/rem.jpg" alt=""></a></li>
+      </ul>
+    </div>
+</div>
+
+<!-- footer -->
+  <div class="footer">
+    <div class="footer-top">
+      <div class="footer-top-target">
+          <span class="footer-top-target-duo"><img src="jd/service_items_1.png" alt="" /></span>
+          <span class="footer-top-target-kuai"><img src="jd/service_items_2.png" alt="" /></span>
+          <span class="footer-top-target-hao"><img src="jd/service_items_3.png" alt="" /></span>
+          <span class="footer-top-target-sheng"><img src="jd/service_items_4.png" alt="" /></span>
+      </div>
+      <div class=" w footer-top-service clearfix">
+          <dl>
+            <dt>购物指南</dt>
+            <dd><a href="#">购物流程</a></dd>
+            <dd><a href="#">会员介绍</a></dd>
+            <dd><a href="#">生活旅行/团购</a></dd>
+            <dd><a href="#">常见问题</a></dd>
+            <dd> <a href="#">大家电</a></dd>
+            <dd><a href="#">联系客服</a></dd>
+          </dl>
+          <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送收费标准</a></dd>
+            <dd><a href="#">配送服务查询</></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送收费标准</a></dd>
+            <dd><a href="#">配送服务查询</></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl>
+            <dt>配送方式</dt>
+            <dd><a href="#">上门自提</a></dd>
+            <dd><a href="#">211限时达</a></dd>
+            <dd><a href="#">配送收费标准</a></dd>
+            <dd><a href="#">配送服务查询</></dd>
+            <dd><a href="#">海外配送</a></dd>
+          </dl>
+          <dl class="footer-top-service-last-dl">
+            <dt>特色服务</dt>
+            <dd><a href="#">夺宝岛</a></dd>
+            <dd><a href="#">DIY装机</a></dd>
+            <dd><a href="#">延保服务</a></dd>
+            <dd><a href="#">京东通信</a></dd>
+            <dd><a href="#">京东E卡</a></dd>
+          </dl>
+
+          <div class="footer-top-service-map">
+              <p class="footer-top-service-map-title">京东自营覆盖区域</p>
+              <div class="footer-top-service-map-text">
+                <p>京东已向全国2603个区县提供自营配送服务，支持货到付款、POS机刷卡和售后上门服务。</p>
+                <p class="footer-top-service-map-text-look">
+                  <a href="#">查看详情&gt; </a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class=" w footer-bottom">
+            <hr>
+            <div class="footer-bottom-contact">
+              <a href="#">关于我们</a> |
+              <a href="#">联系我们</a> |
+              <a href="#">商家入驻</a> |
+              <a href="#">营销中心</a> |
+              <a href="#">手机京东</a> |
+              <a href="#">友情链接</a> |
+              <a href="#">销售联盟</a> |
+              <a href="#">京东社区</a> |
+              <a href="#">京东公益</a> |
+              <a href="#">English Site</a> |
+              <a href="#">Contact Us</a>
+            </div>
+            <div class="footer-bottom-link">
+              <a href="#">
+                <img src="jd/link-icon.png" alt="">
+                京公网安备 11000002000088号&nbsp;&nbsp;|&nbsp;&nbsp;
+              </a>
+              <span>京ICP证070359号&nbsp;&nbsp;|</span>
+              <a href="#">
+                互联网药品信息服务资格证编号(京)-经营性-2014-0008&nbsp;&nbsp;|&nbsp;&nbsp;
+              </a>
+              <span>新出发京零 字第大120007号&nbsp;&nbsp;|&nbsp;&nbsp;</span>
+              <span> 互联网出版许可证编号新出网证(京)字150号&nbsp;&nbsp;</span>
+              <br>
+
+              <a href="#">出版物经营许可证</a>&nbsp;
+              <a href="#">网络文化经营许可证京网文[2014]2148-348号</a>&nbsp;
+              <span>违法和不良信息举报电话：4006561155&nbsp;</span>
+              <span>Copyright © 2004-2016  京东JD.com 版权所有</span>
+              <br>
+
+              <span>京东旗下网站:</span>
+              <a href="#">京东钱包</a>
+            </div>
+            <div class="footer-bottom-auth">
+              <a href="#">
+                <img src="jd/auth-1.png" alt="">
+              </a>
+              <a href="#">
+                <img src="jd/auth-2.png" alt="">
+              </a>
+              <a href="#">
+                <img src="jd/auth-3.jpg" alt="">
+              </a>
+              <a href="#">
+                <img src="jd/auth-4.png" alt="">
+              </a>
+              <a href="#">
+                <img src="jd/auth-5.jpg" alt="">
+              </a>
+              <a href="#">
+                <img src="jd/auth-6.jpg" alt="">
+              </a>
+            </div>
+          </div>
+        </div>
+</body>
+</html>

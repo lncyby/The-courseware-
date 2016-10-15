@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>innerHTML</title>
+  </head>
+  <body>
+    <div>
+      <p>白日依山尽</p>
+      <p>黄河入海流</p>
+      <p>欲穷千里目</p>
+      <p>更上一层楼</p>
+    </div>
+
+    <script type="text/javascript">
+      var ps = document.getElementsByTagName("p");
+
+      for (var i = 0; i < ps.length; i++) {
+        // 获取元素内容
+        console.log(ps[i].innerHTML);
+      }
+
+      for (var i = 0; i < ps.length; i++) {
+        // 修改元素内容
+        switch (i) {
+          case (0): ps[0].innerHTML = "床前明月光"; break;
+          case (1): ps[1].innerHTML = "疑是地上霜"; break;
+          case (2): ps[2].innerHTML = "举头望明月"; break;
+          case (3): ps[3].innerHTML = "低头思故乡"; break;
+        }
+      }
+
+      // 置空body和html的内容
+      // document.body.innerHTML = ""; document.html.innerHTML = "";
+    </script>
+  </body>
+</html>

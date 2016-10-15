@@ -1,0 +1,113 @@
+html{
+  height: 100%;
+}
+body{
+  background: linear-gradient(to bottom, coral, tomato);
+}
+#robot{
+  width: 540px;
+  height: 250px;
+  margin: 300px auto 0;
+}
+#robot > div+div{
+  margin-left: 10px;
+}
+.piston{
+  width: 100px;
+  height: 250px;
+  border-radius: 10px 10px 50px 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+  float: left;
+  position: relative;
+  box-shadow: 0 -4px rgba(0, 0, 0, 0.2), 0 4px rgba(255, 255, 255, 0.2);
+}
+.block{
+  width: 100px;
+  height: 60px;
+  background-color: #555;
+  border-radius: 10px;
+  text-align: center;
+  line-height: 60px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #444;
+  text-shadow: 0px -1px 1px black, 0px 1px 1px rgba(255, 255, 255, 0.5);
+  position: relative;
+  animation: one 1.2s linear infinite;
+  box-shadow:0 -4px rgba(0, 0, 0, 0.2) inset, 0 4px rgba(255, 255, 255, 0.2) inset;
+}
+.piston:nth-child(2) .block{
+  animation-delay: 0.1s;
+}
+.piston:nth-child(3) .block{
+  animation-delay: 0.2s;
+}
+.piston:nth-child(4) .block{
+  animation-delay: 0.3s;
+}
+.piston:nth-child(5) .block{
+  animation-delay: 0.4s;
+}
+.arm{
+  width: 20px;
+  height: 120px;
+  border-radius: 10px;
+  background-color: #555;
+  box-shadow: 0 -22px 0 rgba(0, 0, 0, 0.2) inset;
+  position: absolute;
+  top: 40px;
+  left: 40px;
+  z-index: -1;
+  transform-origin: top;
+  animation: two 1.2s linear infinite;
+  animation-delay: inherit;
+}
+.arm::after{
+  content: "";
+  position: absolute;
+  left: 2px;
+  bottom: 0;
+  display: block;
+  width: 16px;
+  height: 16px;
+  border-radius: 8px;
+  background-color: #eee;
+}
+.rotator{
+  width: 60px;
+  height: 60px;
+  border: 20px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50px;
+  position: absolute;
+  bottom: 0;
+  /* 相对于piston进行绝对定位 */
+  z-index: -1;
+}
+@keyframes one{
+  0%{
+    transform: translateY(0);
+  }
+  50%{
+    transform: translateY(90px);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes two{
+  0%{
+    transform: rotate(0);
+  }
+  25%{
+    transform: rotate(-18deg)
+  }
+  50%{
+    transform: rotate(0);
+  }
+  75%{
+    transform: rotate(18deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}

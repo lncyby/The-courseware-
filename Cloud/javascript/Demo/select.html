@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>switch语句</title>
+    <style>
+      select{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        border: none;
+        list-style: none;
+        font-size: 30px;
+        background-color: rgb(249, 204, 226);
+        position: absolute;
+        left: 1250px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <select id="one">
+      <option value="1" selected>1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+    </select>
+
+    <img id="img" src="./image/4.jpg" alt="">
+
+    <script>
+      var select = document.getElementById("one");
+      var img = document.getElementById("img");
+
+      select.onchange = function() {
+        switch (select.value){
+          case "1":
+            img.src = "./image/4.jpg";
+            break;
+          case "2":
+            img.src = "./image/5.jpg";
+            break;
+          case "3":
+            img.src = "./image/6.jpg";
+            break;
+          case "4":
+            img.src = "./image/8.jpg";
+            break;
+          case "5":
+            img.src = "./image/9.jpg";
+            break;
+        }
+      }
+    </script>
+
+  </body>
+</html>

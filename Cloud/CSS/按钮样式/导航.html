@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>导航</title>
+    <style media="screen">
+    .button {
+       /* em：相对长度单位。相对于当前对象内文本的字体尺寸 */
+      display: inline-block;
+      padding: 7px 16px;
+      border: 1px solid #c5c5c5;
+      background-color: #f6f6f6;
+      box-shadow: 0 0 2px #c5c5c5;
+      color: #454545;
+      text-decoration: none;
+      cursor: pointer;
+      /* 设置是否允许用户选中文本 */
+      -webkit-user-select:none;
+    }
+    .button:hover {
+      border: 1px solid #cccccc;
+      background-color: #ededed;
+      box-shadow: 0 0 2px #cccccc;
+      color: #2b2b2b;
+    }
+    /* active: 设置元素被用户激活时（在鼠标点击与释放之间发生的事件）的样式 */
+    .button:active {
+      border: 1px solid #a4b4e6;
+      background-color: #a4b4e6;
+      box-shadow: 0 0 2px #a4b4e6;
+      color: #ffffff;
+    }
+
+    #mdn {
+      /* 把a元素的高度控制在21px */
+      height: 21px;
+    }
+    .icon {
+      display: inline-block;
+      width: 16px;
+      height: 21px;
+      background: url("./mdn.png") no-repeat;
+      background-size: contain;
+      /* 设置内联元素在行框内的垂直对齐方式 */
+      vertical-align: middle;
+    }
+    </style>
+  </head>
+  <body>
+    <a class="button" href="http://www.css88.com/">css88</a>
+    <a id="mdn" class="button" href="https://developer.mozilla.org/zh-CN/">
+      <span class="icon"></span>
+      MDN
+    </a>
+  </body>
+</html>

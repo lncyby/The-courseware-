@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .main{
+        width: 1000px;
+        height: 500px;
+        margin: 300px auto 0;
+        border: 2px solid silver;
+      }
+      .s{
+        width: 250px;
+        height: 250px;
+        background-color: #cd9a5b;
+        border-radius: 125px;
+        animation-name: run;
+        animation-timing-function: linear;
+      }
+      .s:first-child{
+        animation-duration: 3s;
+      }
+      .s:last-child{
+        animation-duration: 6s;
+      }
+      @keyframes run{
+        0%{
+          transform: translateX(0);
+        }
+        50%{
+          transform: translateX(750px);
+        }
+        100%{
+          transform: translateX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="s"></div>
+      <div class="s"></div>
+    </div>
+  </body>
+</html>

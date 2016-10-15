@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>属性选择符</title>
+    <style media="screen">
+      /* 选中具有class属性，并且其属性值包含c的元素 */
+      p[class*="c"] {
+        color: rgb(73, 163, 201);
+      }
+    </style>
+  </head>
+  <body>
+    <p class="p-a-1">我是a</p>
+    <p class="p-b-1">我是b</p>
+    <p class="p-c-1">我是c</p>
+    <p class="p-d-1">我是d</p>
+  </body>
+</html>

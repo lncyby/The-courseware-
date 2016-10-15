@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>广告跟随页面滚动</title>
+    <style media="screen">
+      body {
+        margin: 0;
+      }
+      #container {
+        width: 100%;
+        height: 3000px;
+        position: relative;
+      }
+      #container img {
+        width: 300px;
+        position: absolute;
+        top: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <img id="image" src="./image/Demo001-01.jpg" alt="">
+    </div>
+    <script type="text/javascript">
+      var image = document.getElementById("image");
+      // image.offsetTop会随着scrollY的增加而增加
+      // target为最开始的image.offsetTop加上当前的scrollY
+      var rawOffsetTop = image.offsetTop;
+
+      // 当用户滚动window的内容时，会触发scroll事件
+      window.onscroll = function () {
+        // window.scrollY: 返回文档在垂直方向已滚动的像素值
+        console.log(window.scrollY);
+        var currentY = window.scrollY;
+        move(image, rawOffsetTop + currentY);
+      }
+
+      // 减速偏移
+      function move(obj, target) {
+        clearInterval(obj.timer)
+        obj.timer = setInterval(function () {
+          var speed = (target - obj.offsetTop) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+          obj.style.top = obj.offsetTop + speed + "px";
+          console.log(obj.offsetTop);
+          if (obj.style.top == target) {
+            clearInterval(obj.timer);
+          }
+        }, 20)
+      }
+    </script>
+  </body>
+</html>

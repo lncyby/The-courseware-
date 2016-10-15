@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 1000px;
+        box-shadow: 0 0 10px black;
+        margin: 50px auto 0;
+      }
+      ul{
+        height: 400px;
+        list-style: none;
+        display: flex;
+        padding: 0;
+      }
+      ul li{
+        width: 200px;
+        height: 200px;
+        background-color: silver;
+        font-size: 100px;
+        text-align: center;
+        line-height: 200px;
+      }
+
+      /* flex-wrap属性（容器属性）定义flex容器是单行或者多行，同时横轴的方向决定了新行排列的方向 */
+      .no-wrap ul{
+        /* 默认值 */
+        flex-wrap: nowrap;
+      }
+      .wrap ul{
+        flex-direction: row-reverse;
+        /* 换行，第一行在上方 */
+        flex-wrap: wrap;
+      }
+      .wrap-reverse ul{
+        /* 换行，第一行在下方 */
+        flex-wrap: wrap-reverse;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="no-wrap">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </div>
+    <div class="wrap">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </div>
+    <div class="wrap-reverse">
+      <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+      </ul>
+    </div>
+  </body>
+</html>

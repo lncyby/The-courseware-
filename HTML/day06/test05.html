@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>清除浮动的第二种方式</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f {
+         width: 1000px;
+         background-color: blue;
+         margin: 0 auto;
+       }
+
+        .f div.s1,
+        .f div.s2,
+        .f div.s3 {
+         width: 300px;
+         height: 100px;
+         float: left;
+       }
+
+       .f .s1 {
+         background-color: red;
+       }
+
+       .f .s2 {
+         background-color: yellow;
+       }
+
+       .f .s3 {
+         background-color: pink;
+       }
+
+        .f .clear {
+          clear: both;
+       }
+
+
+    </style>
+  </head>
+  <body>
+
+    <div class="f">
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+      <!-- 在父盒子的最后添加一个空元素，并且给其添加clear:both属性 -->
+      <div class="clear"></div>
+    </div>
+
+    <div class="f1">
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+      价格司空见惯开始司空见惯扩大化<br/>
+    </div>
+  </body>
+</html>

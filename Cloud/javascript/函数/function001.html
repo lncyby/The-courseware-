@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>函数声明与函数表达式</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      var condition = false;
+      // sayHi(); // 报错，sayHi is not a function
+      if (condition) {
+        function sayHi() {
+          console.log("Hi!");
+        };
+      } else {
+        function sayHi() {
+          console.log("Yo!");
+        }
+      }
+      sayHi();
+
+      var condition = false;
+      var sayHi;
+      if (condition) {
+        sayHi = function () {
+          console.log("Hi!");
+        };
+      } else {
+        sayHi = function () {
+          console.log("Yo!");
+        };
+      }
+      sayHi();
+    </script>
+  </body>
+</html>

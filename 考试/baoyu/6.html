@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>选择器</title>
+  </head>
+<body>
+    <div class="box"></div>
+    <div id="box"></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <script>
+        function query(str){
+            var lis=[];
+            switch (str.charAt(0)){
+                case '#':
+                    var sub = document.getElementById(str.substring(1));
+                    lis.push(sub);
+                    break;
+                case '.':
+                    lis = document.getElementsByClassName(str.substring(1));
+                    break;
+                default :
+                    lis = document.getElementsByTagName(str);
+            }
+            return lis;
+        }
+        var str = query("#box");
+        console.log("id类型：",str);
+        var str1 = query(".box");
+        console.log("class类型：",str1);
+        var str2 = query("div");
+        console.log("tagName类型：",str2);
+    </script>
+</body>
+</html>

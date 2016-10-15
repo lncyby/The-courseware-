@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      div{
+        width: 550px;
+        height: 50px;
+        margin: 100px auto 0;
+      }
+      div ul{
+        list-style: none;
+      }
+      div ul li{
+        width: 100px;
+        height: 50px;
+        margin: 0 0.5px 0 0.5px;
+        text-align: center;
+        line-height: 50px;
+        transition: all 0.5s linear;
+        float: left;
+        position: relative;
+        transform-origin: top center;
+        transform-style: preserve-3d;
+      }
+      .li-s1{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 50px;
+        background-color: #00ae9d;
+        transform-origin: top center;
+        transform: rotateX(90deg);
+      }
+      .li-s2{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        height: 50px;
+        background-color: #65c294;
+      }
+      div ul li:hover{
+        transform: rotateX(-90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <ul>
+        <li>
+          <span class="li-s1">
+            红酥手
+          </span>
+          <span class="li-s2">
+            黄藤酒
+          </span>
+        </li>
+        <li>
+          <span class="li-s1">
+            红酥手
+          </span>
+          <span class="li-s2">
+            黄藤酒
+          </span>
+        </li>
+        <li>
+          <span class="li-s1">
+            红酥手
+          </span>
+          <span class="li-s2">
+            黄藤酒
+          </span>
+        </li>
+        <li>
+          <span class="li-s1">
+            红酥手
+          </span>
+          <span class="li-s2">
+            黄藤酒
+          </span>
+        </li>
+        <li>
+          <span class="li-s1">
+            红酥手
+          </span>
+          <span class="li-s2">
+            黄藤酒
+          </span>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

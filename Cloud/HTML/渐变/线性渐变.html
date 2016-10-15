@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>线性渐变</title>
+    <style>
+      #div-1{
+        width: 800px;
+        height: 400px;
+        /* 百分比设置的是颜色的起始位置 */
+        background: linear-gradient(to right, red 14%, orange 14%, orange 28%,
+                    yellow 28%, yellow 42%, green 42%, green 56%, navy 56%,
+                    navy 70%, blue 70%, blue 84%, purple 84%, purple 100%);
+      }
+      #div-2{
+        width: 800px;
+        height: 400px;
+        margin-top: 10px;
+        background: linear-gradient(135deg, green 25%, yellow 25%, yellow 50%,
+                    green 50%, green 75%, yellow 75%, yellow 100%);
+        background-size: 50px 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1"></div>
+    <div id="div-2"></div>
+  </body>
+</html>

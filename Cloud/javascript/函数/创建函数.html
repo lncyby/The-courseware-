@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>函数定义</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 函数声明语法：function functionName(arg0, arg1, arg2, ...) {
+      // 函数体
+    // }
+      // 函数声明提升：读取代码之前会先读取函数声明
+      // sayHi(); // 在函数创建之前调用函数
+      // 函数声明语法：function functionName(arg0, arg1, arg2, ...) {
+      // 函数体
+    // }
+      // function sayHi() {
+      //   alert("Hi!");
+      // }
+
+      // 函数表达式语法：var Name = function(arg0, arg1, arg2, ...) {
+      // 函数体
+    // }
+      // 使用函数表达式创建的函数为匿名函数，function关键字后面并没有标识符
+
+      // sayHi(); // 报错，使用前必须先赋值
+      var sayHi = function () {
+        console.log("Hi!");
+      }
+      sayHi(); // Hi!
+    </script>
+  </body>
+</html>

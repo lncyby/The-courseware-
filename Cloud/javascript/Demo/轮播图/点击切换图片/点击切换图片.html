@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>爱蜜莉雅</title>
+    <style>
+      img{
+        position: absolute;
+        top: 50px;
+        left: 50%;
+        margin-left: -600px;
+      }
+      div span{
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(249, 204, 226);
+        text-align: center;
+        line-height: 50px;
+        border: none;
+        border-radius: 25px;
+        margin: 0 10px 0 10px;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+      }
+      div{
+        position: absolute;
+        top: 800px;
+        left: 50%;
+        margin-left: -165px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <img id="img" src="./image/1.jpg" alt="">
+
+    <div>
+      <span id="span-1">1</span>
+      <span id="span-2">2</span>
+      <span id="span-3">3</span>
+      <span id="span-4">4</span>
+      <span id="span-5">5</span>
+    </div>
+
+    <script>
+      var img = document.getElementById("img")
+      var span1 = document.getElementById("span-1");
+      var span2 = document.getElementById("span-2");
+      var span3 = document.getElementById("span-3");
+      var span4 = document.getElementById("span-4");
+      var span5 = document.getElementById("span-5");
+
+      span1.onclick = function() {
+        img.src = "./1.jpg";
+      }
+      span2.onclick = function() {
+        img.src = "./2.jpg";
+      }
+      span3.onclick = function() {
+        img.src = "./5.jpg";
+      }
+      span4.onclick = function() {
+        img.src = "./7.jpg";
+      }
+      span5.onclick = function() {
+        img.src = "./9.jpg";
+      }
+    </script>
+
+  </body>
+</html>

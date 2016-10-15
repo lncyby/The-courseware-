@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .main{
+        width: 800px;
+        height: 800px;
+        margin: 0 auto;
+        transform: rotate(-90deg);
+      }
+      .s{
+        width: 150px;
+        height: 150px;
+        text-align: center;
+        line-height: 150px;
+        margin: 8px 0 0 8px;
+        background-color: #ed1941;
+        animation-name: run;
+        animation-duration: 5s;
+      }
+      @keyframes run{
+        0%{
+          width: 0;
+        }
+        50%{
+          width: 700px;;
+        }
+        100%{
+          width: 0;
+        }
+      }
+      .s:nth-child(1){
+        animation-timing-function: ease;
+      }
+      .s:nth-child(2){
+        animation-timing-function: linear;
+      }
+      .s:nth-child(3){
+        animation-timing-function: ease-in;
+      }
+      .s:nth-child(4){
+        animation-timing-function: ease-out;
+      }
+      .s:nth-child(5){
+        animation-timing-function: ease-in-out;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <div class="s">ease</div>
+      <div class="s">linear</div>
+      <div class="s">ease-in</div>
+      <div class="s">ease-out</div>
+      <div class="s">ease-in-out</div>
+    </div>
+  </body>
+</html>

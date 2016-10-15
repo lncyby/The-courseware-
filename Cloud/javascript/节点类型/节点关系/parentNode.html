@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>parentNode属性</title>
+  </head>
+  <body>
+
+    <div>
+      <ul id="ul-id">
+        <li>我是第一个li</li>
+        <li>我是第二个li</li>
+        <li>我是第三个li</li>
+        <li>我是第四个li</li>
+        <li>我是第五个li</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var lis = document.getElementsByTagName("li");
+
+      // 每个节点都有一个parentNode属性
+      console.log(lis[0].parentNode); // <ul id="ul-id">...</ul>
+      console.log(lis[1].parentNode); // <ul id="ul-id">...</ul>
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>onclick</title>
+    <style>
+      ul{
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      ul li{
+        width: 200px;
+        height: 200px;
+        border-radius: 100px;
+        float: left;
+        margin: 0 10px 0 10px;
+      }
+      div{
+        width: 1200px;
+        margin: 100px auto 0;
+      }
+      span{
+        position: absolute;
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+        background-color: green;
+        top: 350px;
+        left: 50%;
+        font-size: 20px;
+        text-align: center;
+        line-height: 50px;
+        cursor: pointer;
+      }
+      div span:nth-child(2){
+        top: 350px;
+        left: 50%;
+        margin-left: -150px;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <!-- ul是第一个孩子 -->
+      <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+      <span id="span-1">真红</span>
+      <span id="span-2">若竹</span>
+    </div>
+
+    <script>
+      // getElementsByTagName(), 根据标签名称获得元素对象，返回一个数组
+      var lis = document.getElementsByTagName("li");
+      var span1 = document.getElementById("span-1");
+      var span2 = document.getElementById("span-2");
+
+      span1.onclick = function() {
+        // lis.length, 数组的元素个数
+        for (var i = 0; i < lis.length; i++){
+          lis[i].style.backgroundColor = "#840228";
+        }
+      }
+      span2.onclick = function() {
+        for (var i = 0; i < lis.length; i++){
+          lis[i].style.backgroundColor = "#65c294";
+        }
+      }
+    </script>
+
+  </body>
+</html>

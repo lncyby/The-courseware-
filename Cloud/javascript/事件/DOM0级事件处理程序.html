@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM0级事件处理程序</title>
+    <style media="screen">
+      div{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        background-color: rgb(47, 204, 195);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="div-id"></div>
+
+    <script type="text/javascript">
+      var divId = document.getElementById("div-id");
+      divId.onclick = function (){
+        alert("div被点击。");
+        console.log(this); // 引用当前元素
+      }
+      // divId.onclick = null; // 删除DOM0级事件处理程序
+    </script>
+
+  </body>
+</html>

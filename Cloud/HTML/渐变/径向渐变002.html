@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .circle{
+        width: 300px;
+        height: 300px;
+        float: left;
+        margin-left: 50px;
+      }
+      .ellipse{
+        width: 500px;
+        height: 300px;
+        float: left;
+        margin-left: 50px;
+      }
+      #div-1{
+        /* border-radius: 150px */
+        background: radial-gradient(150px, yellow, blue, red);
+      }
+      #div-2{
+        /* top left为圆心位置，默认中心为圆心 */
+        background: radial-gradient(150px at top left, yellow 50%, blue, red);
+      }
+
+      #div-3{
+        background: radial-gradient(150px, yellow, blue, red);
+      }
+      #div-4{
+        background: radial-gradient(farthest-side, yellow, blue, red);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="circle" id="div-1"></div>
+    <div class="circle" id="div-2"></div>
+    <div class="ellipse" id="div-3"></div>
+    <div class="ellipse" id="div-4"></div>
+  </body>
+</html>

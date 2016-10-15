@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>定义变量</title>
+  </head>
+  <body>
+    <script>
+    // 定义变量：声明 初始化
+      var a, b; // 定义变量，也可以如此定义：var a = 10, b = "hello";
+      a = 10;
+      b = "hello";
+      console.log(a, b);
+
+      // 在function的执行环境中，未使用var声明的变量会自动被添加到全局执行环境
+      function test(){
+        var value = 10; // 局部变量
+        message = "hello world"; // 全局变量
+      }
+      test(); // 调用函数，创建变量
+      console.log(message); // 输出"hello world", 但不推荐如此定义全局变量
+      console.log(value); // 将会报错，value is not defined
+    </script>
+  </body>
+</html>

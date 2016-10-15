@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>判断元素是否存在</title>
+    <style media="screen">
+      div {
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        background-color: rgb(215, 39, 43);
+        box-shadow: 0 0 6px black;
+        margin: 100px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <script src="./jquery.js"></script>
+    <script type="text/javascript">
+      // 不能如此判断元素是否存在，$('p')返回的是类数组对象。不存在p元素，会返回空对象
+      // if ($('p')) {
+      //   $('div').css('background-color', 'rgb(69, 72, 186)');
+      // }
+
+      // 可以根据获取到的元素长度来判断元素是否存在
+      if ($('p').length > 0) {
+        $('div').css('background-color', 'rgb(69, 72, 186)');
+      }
+
+      // 可以转换成DOM对象来判断
+      if ($('p')[0]) {
+        $('div').css('background-color', 'rgb(69, 72, 186)');
+      }
+    </script>
+  </body>
+</html>

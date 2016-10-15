@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>animate</title>
+    <style media="screen">
+      div {
+        width: 200px;
+        height: 200px;
+        background-color: rgb(14, 134, 159);
+        box-shadow: 0 0 6px black;
+        border-radius: 100px;
+        margin: 200px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("div").click(function () {
+          // 设置一组css属性, 执行自定义动画
+          // 2000: 动画持续时间 (duration)
+          $("div").animate({
+            width: "500px",
+            height: "500px",
+            borderRadius: "250px"
+          }, 2000);
+        });
+      });
+    </script>
+  </body>
+</html>

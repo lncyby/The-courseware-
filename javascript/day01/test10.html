@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js修改元素属性</title>
+</head>
+<body>
+
+<img id="img-1" src="" alt="">
+<br/><br/>
+<button id="btn">点击显示图片</button>
+
+<script>
+    var img = document.getElementById("img-1");
+    var btn = document.getElementById("btn");
+
+    btn.onclick = function () {
+        img.src = "./image/jd1.png";
+    };
+
+</script>
+
+
+</body>
+</html>

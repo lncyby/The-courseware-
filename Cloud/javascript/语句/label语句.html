@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>label语句</title>
+  </head>
+  <body>
+
+    <script>
+      for (var i = 0; i < 2; i++){
+        for (var j = 5; j > 0; j--){
+          if (j == 1){
+            break;
+          }
+          console.log(j);
+        }
+      }
+      console.log("-------------------------");
+      label: for (var i = 0; i < 2; i++){
+        for (var j = 5; j > 0; j--){
+          if (j == 1){
+            break label;
+          }
+          console.log(j);
+        }
+      }
+      console.log("直接跳出了多层循环")
+
+      console.log("----------continue----------");
+      for (var i = 0; i < 2; i++ ){
+        for (var j = 5; j > 0; j--){
+          if (j == 2){
+            continue;
+          }
+          console.log(j);
+        }
+      }
+      console.log("-------------------------")
+      go: for (var i = 0; i < 2; i++ ){
+        for (var j = 5; j > 0; j--){
+          if (j == 2){
+            continue go;
+          }
+          console.log(j);
+        }
+      }
+      console.log("从外层循环继续")
+    </script>
+
+  </body>
+</html>

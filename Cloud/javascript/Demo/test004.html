@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>导航栏切换</title>
+    <style>
+      div{
+        width: 600px;
+        height: 400px;
+        background-color: rgb(63, 228, 193);
+        position: absolute;
+        top: 200px;
+        left: 50%;
+        margin-left: -300px;
+      }
+      span{
+        display: inline-block;
+        width: 140px;
+        height: 50px;
+        background-color: rgb(104, 242, 209);
+        text-align: center;
+        line-height: 50px;
+      }
+      span.background-color{
+        display: inline-block;
+        background-color: transparent;
+      }
+      span+span{
+        margin-left: 9px;
+      }
+      p{
+        display: none;
+      }
+      p.block{
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div>
+      <span>国内</span>
+      <span>国际</span>
+      <span>社会</span>
+      <span>百家</span>
+      <p>
+        国内新闻 台湾气象部门表示，的风景路上的减肥了睡觉地方了受到就分了就是拉丁方实力的房飞
+        的发生的附近了受到附近飞机上了等级分舌底澜翻了睡觉地方老激烈的十分交流九点十分飞飞撒
+        的风景路上的减肥了水电费阿道夫撒地方撒地方撒地方第三方撒地方ad发生地方撒地方地方撒都
+        发送到发送到发送到发送到发撒地方大师傅撒地方撒地方撒旦分开；客服代付款；上岛咖啡；撒
+        点舒服睡地方。
+      </p>
+      <p>
+        国际新闻 台湾气象部门表示，的风景路上的减肥了睡觉地方了受到就分了就是拉丁方实力的房飞
+        的发生的附近了受到附近飞机上了等级分舌底澜翻了睡觉地方老激烈的十分交流九点十分飞飞撒
+        的风景路上的减肥了水电费阿道夫撒地方撒地方撒地方第三方撒地方ad发生地方撒地方地方撒都
+        发送到发送到发送到发送到发撒地方大师傅撒地方撒地方撒旦分开；客服代付款；上岛咖啡；撒
+        点舒服睡地方。
+      </p>
+      <p>
+        社会新闻 台湾气象部门表示，的风景路上的减肥了睡觉地方了受到就分了就是拉丁方实力的房飞
+        的发生的附近了受到附近飞机上了等级分舌底澜翻了睡觉地方老激烈的十分交流九点十分飞飞撒
+        的风景路上的减肥了水电费阿道夫撒地方撒地方撒地方第三方撒地方ad发生地方撒地方地方撒都
+        发送到发送到发送到发送到发撒地方大师傅撒地方撒地方撒旦分开；客服代付款；上岛咖啡；撒
+        点舒服睡地方。
+      </p>
+      <p>
+        百家新闻 台湾气象部门表示，的风景路上的减肥了睡觉地方了受到就分了就是拉丁方实力的房飞
+        的发生的附近了受到附近飞机上了等级分舌底澜翻了睡觉地方老激烈的十分交流九点十分飞飞撒
+        的风景路上的减肥了水电费阿道夫撒地方撒地方撒地方第三方撒地方ad发生地方撒地方地方撒都
+        发送到发送到发送到发送到发撒地方大师傅撒地方撒地方撒旦分开；客服代付款；上岛咖啡；撒
+        点舒服睡地方。
+      </p>
+    </div>
+
+    <script>
+      var spans = document.getElementsByTagName("span");
+      var ps = document.getElementsByTagName("p");
+
+      for (var i = 0; i < spans.length; i++){
+        // 自定义当前对象的myIndex属性
+        spans[i].myIndex = i;
+        spans[i].onmouseover = function() {
+          for (var j = 0; j < spans.length; j++){
+            spans[j].className = "";
+            ps[j].className = "";
+          }
+          this.className = "background-color";
+          ps[this.myIndex].className = "block";
+        }
+      }
+
+    </script>
+  </body>
+</html>

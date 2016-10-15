@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>方法</title>
+  </head>
+  <body>
+
+    <script>
+      console.log("----------concat()----------");
+      var arr = ["red", "green", "blue"];
+      // concat(), 将传入的数组或非数组与数组arr合并，并返回一个新的数组，数组arr不变
+      var arr2 = arr.concat("yellow", ["black", "brown"]);
+      console.log(arr);
+      console.log(arr2);
+
+      console.log("----------slice()----------");
+      newarr = arr2.slice(0, 3);
+      console.log(newarr);
+    </script>
+
+  </body>
+</html>

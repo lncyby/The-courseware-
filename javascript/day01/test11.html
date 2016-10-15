@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>鼠标悬停修改图片</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #div-1 {
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<div id="div-1"><img id="img-1" src="./image/jd1.png" alt=""></div>
+
+<script>
+    var div1 = document.getElementById("div-1");
+    var img1 = document.getElementById("img-1");
+
+    //鼠标悬停
+    div1.onmouseover = function () {
+//        alert("mouse over ...");
+        img1.src = "./image/jd2.png";
+    };
+
+    //鼠标离开
+    div1.onmouseout = function () {
+        img1.src = "./image/jd1.png";
+    };
+
+</script>
+
+</body>
+</html>

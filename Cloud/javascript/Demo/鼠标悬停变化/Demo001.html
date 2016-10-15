@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo001</title>
+    <style media="screen">
+      html {
+        background-color: black;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+      #container {
+        width: 630px;
+        height: 392px;
+        border: 1px solid rgb(173, 134, 85);
+        margin: 200px auto 0;
+      }
+      #container ul li {
+        height: 186px;
+        float: left;
+        margin: 5px 5px;
+        position: relative;
+      }
+      #container ul li span {
+        display: inline-block;
+        width: 200px;
+        height: 186px;
+        background-color: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 0;
+      }
+      #container ul li span.current {
+        background-color: transparent;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <ul>
+        <li>
+          <img src="./images/Demo001_01.jpg" alt="">
+          <span></span>
+        </li>
+        <li>
+          <img src="./images/Demo002_02.jpg" alt="">
+          <span></span>
+        </li>
+        <li>
+          <img src="./images/Demo003_03.jpg" alt="">
+          <span></span>
+        </li>
+        <li>
+          <img src="./images/Demo004_04.jpg" alt="">
+          <span></span>
+        </li>
+        <li>
+          <img src="./images/Demo005_05.jpg" alt="">
+          <span></span>
+        </li>
+        <li>
+          <img src="./images/Demo006_06.jpg" alt="">
+          <span></span>
+        </li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var lis = document.getElementsByTagName("li");
+      var spans = document.getElementsByTagName("span");
+
+      for (var i = 0; i < lis.length; i++) {
+        lis[i].index = i;
+        lis[i].onmouseover = function () {
+          for (var j = 0; j < spans.length; j++) {
+            spans[j].className = "";
+          }
+          spans[this.index].className = "current";
+        };
+      }
+    </script>
+  </body>
+</html>

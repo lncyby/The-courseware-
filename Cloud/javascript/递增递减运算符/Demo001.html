@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>递增递减运算符</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 前置增量运算符，对操作数进行增量计算，并返回增量计算之后的值
+      var i = 1, j = ++i; // i=2 j=2
+      // 后置增量运算符，对操作数进行增量计算，但返回增量计算之前的值
+      var i = 1, j = i++; // i=2 j=1
+
+      var i = 2, j = --i; // i=1, j=1;
+      console.log(i, j);
+      var i = 2, j = i--; // i=1, j=2;
+      console.log(i, j);
+    </script>
+  </body>
+</html>

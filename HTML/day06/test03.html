@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>父盒子中所有的子盒子都浮动</title>
+    <style>
+       * {
+         margin: 0;
+         padding: 0;
+       }
+
+       .f {
+         width: 1000px;
+         background-color: blue;
+         margin: 0 auto;
+         height: 300px;/*给父盒子直接设置高度，可以清除浮动的影响*/
+       }
+
+       .f div {
+         width: 300px;
+         height: 100px;
+         float: left;
+       }
+
+       .f .s1 {
+         background-color: red;
+       }
+
+       .f .s2 {
+         background-color: yellow;
+       }
+
+       .f .s3 {
+         background-color: pink;
+       }
+
+       .f1 {
+         width: 1000px;
+         height: 500px;
+         background: green;
+         margin: 0 auto;
+       }
+
+    </style>
+  </head>
+  <body>
+
+    <div class="f">
+      <!-- 如果一个父盒子div没有设置高，这个div中的所有的元素都浮动了，那么这个div的高是0 -->
+      <div class="s1"></div>
+      <div class="s2"></div>
+      <div class="s3"></div>
+    </div>
+
+    <div class="f1">
+    </div>
+
+  </body>
+</html>

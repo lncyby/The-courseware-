@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>js获得隐藏元素的高宽，不影响原布局，并保留元素的原css样式</title>
+    <style media="screen">
+      #box {
+        width: 500px;
+        height: 500px;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="box"></div>
+
+    <script type="text/javascript">
+      var box = document.getElementById("box");
+      var oldstyle = {};
+
+      var cur = {
+        // 不影响文档流
+        position: "absolute",
+        display: "block",
+        visibility: "hidden"
+      };
+
+      for (var p in cur) {
+        // 保存原css样式
+        oldstyle[p] = box.style[p];
+        box.style[p] = cur[p];
+      }
+      console.log("box width:", box.offsetWidth);
+      // 还原为原css样式
+      for (var p in cur) {
+        box.style[p] = oldstyle[p];
+      }
+    </script>
+  </body>
+</html>

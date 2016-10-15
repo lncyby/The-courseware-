@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>map函数</title>
+  </head>
+  <body>
+
+    <script>
+      // arr.map(callback[, thisArg])
+      // callback: 原数组中的元素被执行该函数后返回一个新的值
+      // callback被调用是传入三个参数：1.元素的值 2.元素的索引 3.被遍历的数组
+
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+      function m(item, index, array) {
+        return (item * 2);
+      }
+
+      // map()返回一个数组，元素为所有callback函数返回的值
+      var result = numbers.map(m);
+      console.log(result); // [2, 4, 6, 8, 10, 8, 6, 4, 2]
+    </script>
+
+  </body>
+</html>

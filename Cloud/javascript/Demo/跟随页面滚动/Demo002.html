@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Demo002</title>
+    <style media="screen">
+      html, body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+      }
+      ul {
+        list-style: none;
+        width: 100px;
+        height: 228px;
+        position: fixed;
+        top: 50%;
+        margin-top: -114px;
+      }
+      ul li {
+        width: 100px;
+        height: 57px;
+        text-align: center;
+        line-height: 57px;
+        cursor: pointer;
+      }
+      div {
+        width: 100%;
+        height: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <ul>
+      <li>第一屏</li>
+      <li>第二屏</li>
+      <li>第三屏</li>
+      <li>第四屏</li>
+    </ul>
+
+    <script type="text/javascript">
+      var divs = document.getElementsByTagName("div");
+      var lis = document.getElementsByTagName("li");
+      var colors = ["rgb(8, 150, 127)", "rgb(86, 190, 151)", "rgb(101, 232, 232)",
+                   "rgb(201, 242, 182)"];
+      var screenHeight = divs[0].offsetHeight;
+      console.log(screenHeight);
+
+      for (var i = 0; i < colors.length; i++) {
+        divs[i].style.backgroundColor = colors[i];
+        lis[i].style.backgroundColor = colors[i];
+
+        lis[i].index = i;
+        lis[i].onclick = function () {
+          // 得到当前颜色屏幕顶部至文档顶部的距离
+          var target = screenHeight * this.index;
+          move(target);
+        }
+      }
+
+      var currentY = 0; // 定义全局变量
+      // 获取当前文档在垂直方向已滚动的像素值
+      window.onscroll = function () {
+        currentY = window.scrollY;
+      };
+
+      var timer = null;
+      function move(target) {
+        // 换屏太快会导致抖动问题，原因在于上一次的setInterval()还未执行完毕就开始了
+        // 下一次的setInterval()的执行
+        clearInterval(timer);
+        timer = setInterval(function () {
+          var speed = (target - currentY) / 10;
+          speed = speed > 0 ? Math.ceil(speed) : Math.floor(speed);
+
+          currentY += speed;
+          // 滚动至当前y所在坐标
+          window.scrollTo(0, currentY);
+
+          if (currentY == target) {
+            clearInterval(timer);
+          }
+        }, 30);
+      };
+    </script>
+  </body>
+</html>

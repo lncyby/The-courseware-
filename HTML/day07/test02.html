@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>定位position属性</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      .f {
+        width: 200px;
+        height: 100px;
+        background: green;
+        /*position: static;*//*默认就是static值，属于标准流*/
+        position: relative;/*仍然属于标准流*/
+        top: 50px;/*盒子相对于自己之前的顶部位置的距离*/
+        left: 50px;/*盒子相对于自己之前左边界的位置的距离*/
+      }
+
+      .f1 {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f"></div>
+    <div class="f1"></div>
+
+  </body>
+</html>

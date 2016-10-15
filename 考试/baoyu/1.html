@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>变色</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body,html {
+        background: black;
+      }
+      .box {
+        width: 645px;
+        height: 419px;
+        border: 1px solid yellow;
+        margin: 50px auto;
+      }
+      ul {
+        list-style: none;
+        /*display: flex;
+        justify-content: space-between;*/
+      }
+      ul li {
+        float: left;
+        padding: 10px 5px 5px 8px;
+        position: relative;
+        opacity: 0.5;
+      }
+      li.current {
+        opacity: 1;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="box" id="box-id">
+      <ul id="ul-id">
+        <li class="current"><p></p><img src="./images/01.jpg" alt=""></li>
+        <li><img src="./images/02.jpg" alt=""></li>
+        <li><img src="./images/03.jpg" alt=""></li>
+        <li><img src="./images/04.jpg" alt=""></li>
+        <li><img src="./images/05.jpg" alt=""></li>
+        <li><img src="./images/06.jpg" alt=""></li>
+      </ul>
+    </div>
+    <script>
+        var box = document.getElementById("box-id");
+        var ul = document.getElementById("ul-id");
+        var lis = ul.getElementsByTagName("li");
+        for (var i = 0; i < lis.length; i++) {
+            lis[i].index = i;
+            lis[i].onmouseover = function () {
+                for (var j = 0; j < lis.length; j++) {
+                lis[j].className = "";
+              };
+            this.className = "current";
+          };
+        };
+    </script>
+  </body>
+</html>

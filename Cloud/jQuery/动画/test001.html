@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>test001</title>
+    <style media="screen">
+      #container {
+        width: 600px;
+        height: 100px;
+        margin: 100px auto 0;
+      }
+
+      /* 子元素选择器 */
+      #container > span {
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+        box-shadow: 0 0 5px black;
+        margin: 0 10px;
+        float: left;
+      }
+      #span-1 {
+        background-color: rgb(50, 207, 188);
+      }
+      #span-2 {
+        background-color: rgb(25, 189, 169);
+      }
+      #span-3 {
+        background-color: rgb(23, 83, 145);
+      }
+      #span-4 {
+        background-color: rgb(61, 71, 210);
+      }
+      #span-5 {
+        background-color: rgb(32, 130, 172);
+      }
+
+      #dp {
+        width: 100px;
+        height: 100px;
+        background-color: rgb(207, 75, 46);
+        box-shadow: 0 0 5px black;
+        margin: 50px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <span id="span-1"></span>
+      <span id="span-2"></span>
+      <span id="span-3"></span>
+      <span id="span-4"></span>
+      <span id="span-5"></span>
+    </div>
+    <div id="dp"></div>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $("span").click(function () {
+          $(this).fadeOut(2000);
+        });
+        $("#dp").click(function () {
+          $("span").fadeIn(2000);
+        });
+      });
+    </script>
+  </body>
+</html>

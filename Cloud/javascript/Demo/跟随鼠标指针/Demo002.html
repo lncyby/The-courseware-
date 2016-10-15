@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>e</title>
+    <style media="screen">
+      #container {
+        width: 600px;
+        height: 300px;
+        border: 1px solid rgb(73, 204, 126);
+        margin: 200px auto 0;
+        overflow: hidden;
+        position: relative;
+      }
+      #content {
+        width: 560px;
+        padding: 10px;
+        position: absolute;
+        top: 0;
+      }
+      #right {
+        width: 30px;
+        height: 300px;
+        background-color: rgba(98, 217, 193, 0.3);
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+      #scroll {
+        width: 30px;
+        border-radius: 15px;
+        background-color: rgb(98, 217, 193);
+        cursor: pointer;
+        position: absolute;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="content">
+        关关雎鸠，在河之洲。窈窕淑女，君子好逑。
+        参差荇菜，左右流之。窈窕淑女，寤寐求之。
+        求之不得，寤寐思服。悠哉悠哉，辗转反侧。
+        参差荇菜，左右采之。窈窕淑女，琴瑟友之。
+        参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。
+        红酥手。黄滕酒。满城春色宫墙柳。
+        东风恶。欢情薄。一怀愁绪，几年离索。错错错。
+        春如旧。人空瘦。泪痕红浥鲛绡透。
+        桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。
+        葛之覃兮，施于中谷，维叶萋萋。
+        黄鸟于飞，集于灌木，其鸣喈喈。
+        葛之覃兮，施于中谷，维叶莫莫。
+        是刈是濩，为絺为綌，服之无斁。
+        言告师氏，言告言归。
+        薄污我私，薄浣我衣。害浣害否？归宁父母。
+        采采卷耳，不盈顷筐。嗟我怀人，置彼周行。
+        陟彼崔嵬，我马虺隤。我姑酌彼金罍，维以不永怀。
+        陟彼高冈，我马玄黄。我姑酌彼兕觥，维以不永伤。
+        陟彼砠矣，我马瘏矣，我仆痡矣，云何吁矣。
+        南有樛木，葛藟累之。乐只君子，福履绥之。
+        南有樛木，葛藟荒之。乐只君子，福履将之。
+        南有樛木，葛藟萦之。乐只君子，福履成之。
+        肃肃兔罝，椓之丁丁。赳赳武夫，公侯干城。
+        肃肃兔罝，施于中逵。赳赳武夫，公侯好仇。
+        肃肃兔罝，施于中林。赳赳武夫，公侯腹心。
+        关关雎鸠，在河之洲。窈窕淑女，君子好逑。
+        参差荇菜，左右流之。窈窕淑女，寤寐求之。
+        求之不得，寤寐思服。悠哉悠哉，辗转反侧。
+        参差荇菜，左右采之。窈窕淑女，琴瑟友之。
+        参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。
+        红酥手。黄滕酒。满城春色宫墙柳。
+        东风恶。欢情薄。一怀愁绪，几年离索。错错错。
+        春如旧。人空瘦。泪痕红浥鲛绡透。
+        桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。
+        葛之覃兮，施于中谷，维叶萋萋。
+        黄鸟于飞，集于灌木，其鸣喈喈。
+        葛之覃兮，施于中谷，维叶莫莫。
+        是刈是濩，为絺为綌，服之无斁。
+        言告师氏，言告言归。
+        薄污我私，薄浣我衣。害浣害否？归宁父母。
+        采采卷耳，不盈顷筐。嗟我怀人，置彼周行。
+        陟彼崔嵬，我马虺隤。我姑酌彼金罍，维以不永怀。
+        陟彼高冈，我马玄黄。我姑酌彼兕觥，维以不永伤。
+        陟彼砠矣，我马瘏矣，我仆痡矣，云何吁矣。
+        南有樛木，葛藟累之。乐只君子，福履绥之。
+        南有樛木，葛藟荒之。乐只君子，福履将之。
+        南有樛木，葛藟萦之。乐只君子，福履成之。
+        肃肃兔罝，椓之丁丁。赳赳武夫，公侯干城。
+        肃肃兔罝，施于中逵。赳赳武夫，公侯好仇。
+        肃肃兔罝，施于中林。赳赳武夫，公侯腹心。
+        关关雎鸠，在河之洲。窈窕淑女，君子好逑。
+        参差荇菜，左右流之。窈窕淑女，寤寐求之。
+        求之不得，寤寐思服。悠哉悠哉，辗转反侧。
+        参差荇菜，左右采之。窈窕淑女，琴瑟友之。
+        参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。
+        红酥手。黄滕酒。满城春色宫墙柳。
+        东风恶。欢情薄。一怀愁绪，几年离索。错错错。
+        春如旧。人空瘦。泪痕红浥鲛绡透。
+        桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。
+        葛之覃兮，施于中谷，维叶萋萋。
+        黄鸟于飞，集于灌木，其鸣喈喈。
+        葛之覃兮，施于中谷，维叶莫莫。
+        是刈是濩，为絺为綌，服之无斁。
+        言告师氏，言告言归。
+        薄污我私，薄浣我衣。害浣害否？归宁父母。
+        采采卷耳，不盈顷筐。嗟我怀人，置彼周行。
+        陟彼崔嵬，我马虺隤。我姑酌彼金罍，维以不永怀。
+        陟彼高冈，我马玄黄。我姑酌彼兕觥，维以不永伤。
+        陟彼砠矣，我马瘏矣，我仆痡矣，云何吁矣。
+        南有樛木，葛藟累之。乐只君子，福履绥之。
+        南有樛木，葛藟荒之。乐只君子，福履将之。
+        南有樛木，葛藟萦之。乐只君子，福履成之。
+        肃肃兔罝，椓之丁丁。赳赳武夫，公侯干城。
+        肃肃兔罝，施于中逵。赳赳武夫，公侯好仇。
+        肃肃兔罝，施于中林。赳赳武夫，公侯腹心。
+        关关雎鸠，在河之洲。窈窕淑女，君子好逑。
+        参差荇菜，左右流之。窈窕淑女，寤寐求之。
+        求之不得，寤寐思服。悠哉悠哉，辗转反侧。
+        参差荇菜，左右采之。窈窕淑女，琴瑟友之。
+        参差荇菜，左右芼之。窈窕淑女，钟鼓乐之。
+        红酥手。黄滕酒。满城春色宫墙柳。
+        东风恶。欢情薄。一怀愁绪，几年离索。错错错。
+        春如旧。人空瘦。泪痕红浥鲛绡透。
+        桃花落。闲池阁。山盟虽在，锦书难托。莫莫莫。
+        葛之覃兮，施于中谷，维叶萋萋。
+        黄鸟于飞，集于灌木，其鸣喈喈。
+        葛之覃兮，施于中谷，维叶莫莫。
+        是刈是濩，为絺为綌，服之无斁。
+        言告师氏，言告言归。
+        薄污我私，薄浣我衣。害浣害否？归宁父母。
+        采采卷耳，不盈顷筐。嗟我怀人，置彼周行。
+        陟彼崔嵬，我马虺隤。我姑酌彼金罍，维以不永怀。
+        陟彼高冈，我马玄黄。我姑酌彼兕觥，维以不永伤。
+        陟彼砠矣，我马瘏矣，我仆痡矣，云何吁矣。
+        南有樛木，葛藟累之。乐只君子，福履绥之。
+        南有樛木，葛藟荒之。乐只君子，福履将之。
+        南有樛木，葛藟萦之。乐只君子，福履成之。
+        肃肃兔罝，椓之丁丁。赳赳武夫，公侯干城。
+        肃肃兔罝，施于中逵。赳赳武夫，公侯好仇。
+        肃肃兔罝，施于中林。赳赳武夫，公侯腹心。
+      </div>
+      <div id="right">
+        <div id="scroll"></div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var container = document.getElementById("container");
+      var content = document.getElementById("content");
+      var right = document.getElementById("right");
+      var scroll = document.getElementById("scroll");
+
+      scroll.style.height = container.offsetHeight / content.offsetHeight
+                            * right.offsetHeight + "px";
+      // console.log(scroll.Hight);
+      scroll.onmousedown = function (event) {
+        right.onmousemove = function (event) {
+          var y = event.pageY;
+          if (y <= container.offsetTop + scroll.offsetHeight / 2) {
+            scroll.style.top = "0";
+          } else if (y >= container.offsetTop + right.offsetHeight -
+                    scroll.offsetHeight / 2) {
+            scroll.style.bottom = "0";
+          } else {
+            scroll.style.top = y - container.offsetTop -
+            scroll.offsetHeight / 2 + "px";
+          }
+
+          var scale = (content.offsetHeight - container.offsetHeight) /
+                      (right.offsetHeight - scroll.offsetHeight);
+          content.style.top = -scroll.offsetTop * scale + "px";
+        };
+
+        document.onmouseup = function () {
+          // 鼠标按键回弹，移动事件失效
+          right.onmousemove = null;
+        };
+      };
+    </script>
+  </body>
+</html>

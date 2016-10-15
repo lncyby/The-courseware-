@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .f{
+        width: 300px;
+        height: 150px;
+        border: 3px solid silver;
+        margin: 150px auto 0;
+        /* 指定观察者距离「z=0」平面的距离，
+           透视属性设置在需要产生透视效果的子元素的父元素上 */
+        perspective: 300px;
+      }
+      .rotate{
+        width: 300px;
+        height: 150px;
+        background-color: #444693;
+        transition: all 1s linear;
+      }
+      #x:hover{
+        transform: rotateX(180deg);
+      }
+      #y:hover{
+        transform: rotateY(180deg);
+      }
+      #z:hover{
+        transform: rotateZ(180deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="f">
+      <div class="rotate" id="x"></div>
+    </div>
+    <div class="f">
+      <div class="rotate" id="y"></div>
+    </div>
+    <div class="f">
+      <div class="rotate" id="z"></div>
+    </div>
+  </body>
+</html>

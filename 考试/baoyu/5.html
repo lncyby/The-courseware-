@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>消除重复元素</title>
+  </head>
+<body>
+    <script>
+        var raw = [23,1,14,1,3,20,3,22,17,23];
+        var lis = [];
+        var inx = 0;
+        for(var i = 0 ; i < raw.length ; i++){
+            if(lis.indexOf(raw[i])==-1){
+                lis.push(raw[i]);
+            }
+        }
+        for (var j = 0 ; j< lis.length ; j++){
+            for (var k = 0 ; k < lis.length - 1 ; k++){
+                if (lis[j] < lis[k]){
+                    inx = lis[k];
+                    lis[k] = lis[j];
+                    lis[j] = inx;
+                }
+            }
+        }
+
+        console.log("排序后的数组为：" + lis);
+
+    </script>
+</body>
+</html>

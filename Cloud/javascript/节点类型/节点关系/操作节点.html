@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>操作节点</title>
+  </head>
+  <body>
+
+    <div>
+      <ul id="ul-id">
+        <li>我是第一个li</li>
+        <li>我是第二个li</li>
+        <li>我是第三个li</li>
+        <li>我是第四个li</li>
+        <li>我是第五个li</li>
+      </ul>
+    </div>
+
+    <script type="text/javascript">
+      var ulId = document.getElementById("ul-id");
+
+      var newNode = document.createElement("li"); // 产生一个新标签
+      newNode.innerHTML = "我是最后一个li"; // 为新标签添加内容
+      ulId.appendChild(newNode); // 在子元素的尾部追加新元素
+      console.log(ulId.lastChild);
+
+      // 如果传入appendChild()中的子节点已经存在，那便是将传入的子节点移动到所有子元素的尾
+      // 部
+      ulId.appendChild(ulId.children[0]);
+      console.log(ulId); // <li>我是第一个li</li>出现在尾部
+
+      ulId.insertBefore(newNode, ulId.firstChild); // 在某个子节点前插入节点
+      console.log(ulId); // 成为第一个子节点
+      ulId.insertBefore(newNode, null);
+      console.log(ulId); // 成为最有一个子节点
+
+      var newNode1 = document.createElement("li");
+      newNode1.innerHTML = "我是用来替换的标签";
+      // 用一个子节点替换另一个子节点，返回被替换的子节点
+      var oldNode = ulId.replaceChild(newNode1, ulId.firstChild);
+      console.log(oldNode);
+      console.log(ulId);
+
+      ulId.removeChild(ulId.children[0]);
+      console.log(ulId);
+    </script>
+
+  </body>
+</html>

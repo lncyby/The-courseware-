@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>作业</title>
+    <style media="screen">
+      div:nth-child(1) img {
+        position: absolute;
+        top: 200px;
+      }
+      div:nth-child(2) img {
+        position: absolute;
+        top: 200px;
+        right: 0;
+      }
+      span {
+        display: block;
+        position: absolute;
+        top: 450px;
+        cursor: pointer;
+      }
+      div:nth-child(1) span {
+        left: 75px;
+      }
+      div:nth-child(2) span {
+        right: 75px;
+      }
+      div:nth-child(3) p {
+        font-size: 30px;
+        text-align: center;
+      }
+      .current {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1">
+      <img src="01.jpg" alt="">
+      <span>点击关闭</span>
+    </div>
+    <div id="div-2">
+      <img src="02.jpg" alt="">
+      <span>点击关闭</span>
+    </div>
+    <div id="div-3">
+      <p></p>
+    </div>
+
+    <script type="text/javascript">
+      var div1 = document.getElementById("div-1");
+      var div2 = document.getElementById("div-2");
+      var div3 = document.getElementById("div-3");
+
+      div1.children[1].onclick = function () {
+        div1.children[0].className = "current";
+        div1.children[1].className = "current";
+      }
+      div2.children[1].onclick = function () {
+        div2.children[0].className = "current";
+        div2.children[1].className = "current";
+      }
+
+      var num = 10;
+
+      var timer = setInterval(time, 1000);
+      function time() {
+        if (num < 1) {
+          clearInterval(timer);
+          console.log("123");
+          div3.children[0].innerHTML = "";
+          div1.children[0].className = "current";
+          div1.children[1].className = "current";
+          div2.children[0].className = "current";
+          div2.children[1].className = "current";
+          return;
+        }
+        div3.children[0].innerHTML = "距离广告关闭还剩" + num;
+        num--;
+      }
+    </script>
+  </body>
+</html>

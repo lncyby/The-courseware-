@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>indexOf() and lastIndexOf()</title>
+  </head>
+  <body>
+
+    <script>
+      // 语法：arr.indexOf(searchElement[, fromIndex = 0])
+      // searchElement: 被查找的元素
+      // fromIndex: 查找的起始位置
+
+      var numbers = [1, 2, 3, 4, 5, 4, 3, 2, 1];
+      // 顺序查找
+      console.log(numbers.indexOf(4)); // 返回查找到的一个索引值3
+      // 逆序查找
+      console.log(numbers.lastIndexOf(4)); // 返回查找到的一个索引值5
+
+      // 顺序从索引为4的位置开始查找，返回查找到的一个索引值5
+      console.log(numbers.indexOf(4, 4));
+      // 逆序从索引为4的位置开始查找，返回查找到的一个索引值3
+      console.log(numbers.lastIndexOf(4, 4));
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>初识浮动</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+
+      div {
+        height: 100px;
+      }
+      .box1 {
+        width: 200px;
+        background-color: red;
+        float: left;
+      }
+      .box2 {
+        width: 300px;
+        background-color: yellow;
+        height: 200px;
+        float: left;/*设置了浮动*/
+      }
+
+      .box3 {
+        width: 400px;
+        background-color: pink;
+        float: right;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- 当一个元素设定float之后，那么它就变为行内块元素  -->
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <p>默认的块级元素的display</p>
+
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div class="box" id="box-id">
+    </div>
+  <script>
+      var text = "   abemgdgfd  dfdet   ";
+      var content = document.getElementById("box-id");
+      function lis(str){
+          return str.replace(/(^\s*)|(\s*$)/g,"");
+      }
+      var news = lis(text);
+
+      console.log("原文本为：" + text);
+      console.log("新文本为：" + news);
+  </script>
+  </body>
+</html>

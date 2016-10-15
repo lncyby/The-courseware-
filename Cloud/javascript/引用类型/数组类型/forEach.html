@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>forEach方法</title>
+  </head>
+  <body>
+
+    <script>
+      // 语法：array.forEach(callback[, thisArg])
+      // callback: 在数组每一项上执行的函数，接受三个参数：
+      // currentvalue: 当前元素项 index: 当前项的索引 array: 数组
+      var arr = [2, 5, 9];
+      function logArrayElement(element, index, array) {
+        console.log("a[" + index + "] = " + element);
+      }
+      arr.forEach(logArrayElement);
+
+      var a = [1, 2, 3, 4, 5];
+      var sum = 0;
+
+      for (var i = 0; i < a.length; i++) {
+        sum += a[i];
+      }
+      console.log(sum);
+
+      var sum = 0;
+      function s(element, index, array) {
+        sum += element;
+      }
+
+      // forEach()为数组中的每一个元素执行一次callback函数
+      a.forEach(s);
+      console.log(sum);
+    </script>
+
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>选择器</title>
+    <style>
+      /* 添加css样式 */
+      /*h6使用的标签选择器*/
+      h6 {
+        color: red;
+        font-size: 50px;
+      }
+
+     /* 类选择器
+     点开头，后边紧跟className,其中className就是class的属性值*/
+      .class-1 {
+        color: green;
+        font-size: 20px;
+      }
+
+      /* id 选择器
+      id的值是整个页面中唯一的，不要重复使用*/
+      #aid {
+        color: purple;
+      }
+      
+      * {
+        color: yellow;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <h6>这是h6标签</h6>
+    <p class="class-1">这是p标签</p>
+    <h1 class="class-1">h1标签</h1>
+    <a id="aid" href="www.baidu.com">百度</a>
+
+    <p>默认的p样式</p>
+    <h4>h4标签</h4>
+
+  </body>
+</html>

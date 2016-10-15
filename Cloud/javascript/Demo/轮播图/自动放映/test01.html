@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>轮播</title>
+    <style media="screen">
+      #container {
+        width: 1226px;
+        height: 460px;
+        margin: 100px auto 0;
+        overflow: hidden;
+        position: relative;
+      }
+      ul {
+        width: 4904px;
+        height: 460px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        position: absolute;
+      }
+
+      li {
+        height: 460px;
+        float: left;
+      }
+      #point {
+        position: absolute;
+        bottom: 0;
+        right: 20px;
+      }
+      span {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: black;
+        margin: 0 4px 0 4px;
+        cursor: pointer;
+      }
+      .current {
+        background-color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <ul id="image">
+        <li><img src="./image/1.jpg" alt=""></li>
+        <li><img src="./image/2.jpg" alt=""></li>
+        <li><img src="./image/3.jpg" alt=""></li>
+        <li><img src="./image/4.jpg" alt=""></li>
+      </ul>
+      <div id="point"></div>
+    </div>
+
+    <script type="text/javascript">
+      var image = document.getElementById("image");
+      var images = image.children;
+      var point = document.getElementById("point");
+
+      for (var i = 0; i < images.length; i++) {
+        var span = document.createElement("span");
+        point.appendChild(span);
+      }
+
+      function move(obj, target) {
+        var speed = target > obj.offsetLeft ? 15 : -15;
+
+        var timer = setInterval(function () {
+          var result = target - obj.offsetLeft;
+          if (Math.abs(result) <= 15) {
+            obj.style.left = target + "px";
+            clearInterval(timer);
+          } else {
+            obj.style.left = obj.offsetLeft + speed + "px";
+          }
+        }, 10);
+       }
+
+      var spans = point.children;
+      spans[0].className = "current";
+
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].index = i;
+        spans[i].onclick = function () {
+          for (var j = 0; j < spans.length; j++) {
+            spans[j].className = "";
+          }
+          this.className = "current";
+          move(image, this.index * -1226);
+        };
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>音量调节</title>
+    <style media="screen">
+      #container {
+        position: absolute;
+        width: 350px;
+        height: 50px;
+        top: 200px;
+        left: 50%;
+        margin-left: -175px;
+      }
+      #bar {
+        width: 300px;
+        height: 20px;
+        border-radius: 10px;
+        background-color: rgb(107, 217, 154);
+        position: absolute;
+        top: 50%;
+        margin-top: -10px;
+      }
+      #button {
+        width: 20px;
+        height: 50px;
+        border-radius: 10px;
+        background-color: rgb(54, 210, 121);
+        position: absolute;
+        top: 50%;
+        margin-top: -25px;
+        cursor: pointer;
+      }
+      #size {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        line-height: 50px;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="container">
+      <div id="bar">
+        <div id="button"></div>
+      </div>
+      <span id="size"></span>
+    </div>
+    <script type="text/javascript">
+      var cr = document.getElementById("container");
+      var bar = document.getElementById("bar");
+      var btn = document.getElementById("button");
+      var sz = document.getElementById("size");
+
+      btn.onmousedown = function () {
+        bar.onmousemove = function (event) {
+          var x = event.pageX;
+          var y = event.pageY;
+
+          if (x <= btn.offsetWidth / 2 + cr.offsetLeft) {
+            btn.style.left = "0";
+          } else if (x >= cr.offsetLeft + bar.offsetWidth - btn.offsetWidth / 2) {
+            btn.style.right = "0";
+          } else {
+            btn.style.left = x - cr.offsetLeft - btn.offsetWidth / 2 + "px";
+          }
+          var size = Math.ceil(btn.offsetLeft / (bar.offsetWidth - btn.offsetWidth) * 100);
+          sz.innerHTML = size + "%";
+        };
+
+          document.onmouseup = function () {
+          // 鼠标按键回弹，移动事件失效
+          bar.onmousemove = null;
+        };
+      };
+    </script>
+  </body>
+</html>

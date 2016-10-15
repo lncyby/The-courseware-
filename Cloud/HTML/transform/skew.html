@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>倾斜</title>
+    <style>
+      .origin{
+        width: 300px;
+        height: 150px;
+        border: 3px solid silver;
+        float: left;
+        margin: 100px 0 0 100px;
+      }
+      .current{
+        width: 300px;
+        height: 150px;
+        background-color: #65c294;
+        transition: all 1s linear;
+      }
+      #div-1:hover{
+        /* skewX()方法会保持高度，沿着X轴倾斜 */
+        transform: skewX(30deg);
+      }
+      #div-2:hover{
+        /* skewY()方法会保持宽度，沿着Y轴倾斜 */
+        transform: skewY(30deg);
+      }
+      #div-3:hover{
+        transform: skew(30deg, 30deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <div class="current" id="div-1"></div>
+    </div>
+    <div class="origin">
+      <div class="current" id="div-2"></div>
+    </div>
+    <div class="origin">
+      <div class="current" id="div-3"></div>
+    </div>
+  </body>
+</html>

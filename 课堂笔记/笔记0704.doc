@@ -1,0 +1,26 @@
+一、安装python 2和3
+1.www.python.org下载对应安装包
+2.解压进入目录。
+3.sudo ./configure 环境配置
+4.make  
+5.sudo make install  安装
+问题：cd /usr/bin
+ sudo mv python3 python34
+  sudo ln -s python3 /usr/local/bin/.python35
+二、ipython插件安装 sudo apt-get install ipython
+交互式解释器：用户可以直接在提示行后输入相应的语句并且运行出相应的结果。
+三、文件编写
+   vi hello.py/  #!/usr/bin/python   /print "hello world" /运行 python hello.py
+四、python 
+  程序：为了实现一个特定目标而预先设计的一组可操作的工作步骤就称为一个程序。编程语言：机器语言：直接使用机器指令（0.1序列）来设计程序，可以被计算机直接识别。和自然语言不同，难于记忆和理解，工作量大，效率低，无法移植。
+汇编语言：吧机器指令符号化，通过一组简单的符号来表示机器指令。高级语言：从汇编语言抽象出来的更接近自然语言的编程语言。
+python的程序组成：程序由模块构成。模块包含语句。语句包含表达式。表达式建立并处理对象。python程序是按照语句顺次执行的。但是类，函数等语句块需要调用后才能执行具体内容。
+关键字：在一门编程语言中，有特殊功能的符号。
+python关键字：循环判断  if  elif else  for while break continue and or is not in 函数模块类：from important as def pass lambda return class
+异常：try查看  except处理  finally异常处理后要执行的语句 raise人为抛出异常 其他 del删除一个定义的对象  global在局部使用全局变量 with创建抛出临时对象，会自动回收 assert调试判断 yield临时中断，返回 nonlocal内嵌函数中使用相对外部函数的变量。3.x中新增了三个 true 逻辑真false逻辑假 none赋空值。
+print 在2版本中是关键字。在3版本中是函数。
+
+在python中，用#表示单行注释。还有一种文档字符串的特别注释，可以在模块、类或者函数的起始添加一个字符串，起到在线文档功能，与普通字符串不同，文档字符串可以在运行时访问，也可以用来自动生成文档。 
+python中单斜杠用作传统除法，双斜杠用作浮点除法（对结果进行四舍五入）。双星号**表示乘方。python支持 a<b<c这样的格式。
+	
+

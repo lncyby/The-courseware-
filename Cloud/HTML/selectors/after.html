@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+    p{
+      position: relative;
+    }
+    /* 伪元素选择器 */
+    p::after{
+      position: absolute;
+      /*注意left: 0*/
+      left: 0;
+      /* 利用定位和背景色挡住了p元素 */
+      background-color: white;
+      content: "如果你能看到这段话，说明你的浏览器支持E::before和E::after";
+    }
+    </style>
+  </head>
+  <body>
+    <p>抱歉，你的浏览器不支持E::before和E::after</p>
+  </body>
+</html>

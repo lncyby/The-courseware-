@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>李煜</title>
+    <style>
+      div{
+        width: 300px;
+        margin: 100px auto 0;
+      }
+      h2{
+        color: #009ad6;
+      }
+      p{
+        color: #33a3dc;
+        cursor: pointer;
+      }
+      .current{
+        /* 注意使用!important */
+        color: #840228 !important;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="div">
+      <h2>虞美人</h2>
+      <p>春花秋月何时了，往事知多少？</p>
+      <p>小楼昨夜又东风，故国不堪回首月命中！</p>
+      <p>雕栏玉砌应犹在，只是朱颜改。</p>
+      <p>问君能有几多愁，恰是一江春水向东流。</p>
+    </div>
+
+    <script>
+      var div = document.getElementById("div")
+      // 在div中根据标签名称获得p元素
+      var ps = div.getElementsByTagName("p");
+
+      for (var i = 0; i < ps.length; i++){
+        if (i % 2 == 0){
+          ps[i].style.color = "#7bbfea";
+        }
+
+        ps[i].onmouseover = function() {
+          // this指向的是当前的ps[i]对象
+          this.className = "current";
+        }
+        ps[i].onmouseout = function() {
+          this.className = "";
+        }
+      }
+    </script>
+  </body>
+</html>

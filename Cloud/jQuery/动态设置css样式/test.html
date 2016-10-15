@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>addClass()</title>
+    <style media="screen">
+      div {
+        width: 500px;
+        height: 500px;
+        background-color: rgb(57, 126, 252);
+        border-radius: 250px;
+        box-shadow: 0 0 10px black;
+        margin: 100px auto 0;
+        font-size: 50px;
+        text-align: center;
+        line-height: 500px;
+      }
+      .one {
+        color: rgb(106, 67, 139);
+      }
+    </style>
+  </head>
+  <body>
+    <div>注意我的颜色</div>
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        // 为当前对象添加名为one的类
+        $("div").addClass("one");
+        // 移除当前对象中名为one的类
+        $("div").removeClass("one");
+      });
+    </script>
+  </body>
+</html>

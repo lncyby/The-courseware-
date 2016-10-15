@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>setInterval()</title>
+    <style media="screen">
+      div {
+        width: 500px;
+        height: 500px;
+        font-size: 200px;
+        text-align: center;
+        margin: 100px auto 0;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="times"></div>
+
+    <script type="text/javascript">
+      // 语法：var intervalID = window.setInterval(func, delay);
+      // intervalID是setInterval()的数字ID，是其唯一辨识符
+      // func是你想重复调用的函数
+      // delay是延迟的毫秒数
+
+      var times = document.getElementById("times");
+      var num = 10;
+
+      var timer = setInterval(time, 1000);
+      // console.log(timer);
+      function time() {
+        if (num < 1) {
+          clearInterval(timer);
+          times.innerHTML = "boom!";
+          return;
+        } else {
+          times.innerHTML = num;
+        }
+        num--;
+      }
+    </script>
+  </body>
+</html>

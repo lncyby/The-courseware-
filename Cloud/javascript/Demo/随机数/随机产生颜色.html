@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>随机产生颜色</title>
+  </head>
+  <body>
+    <script type="text/javascript">
+      // 随机产生rgb颜色
+      function getRandomColorRgb() {
+        var colorValue = "rgb(";
+        for (var i = 0; i < 3; i++) {
+          colorValue += Math.round(Math.random() * 255);
+          if (i < 2) {
+            colorValue += ","
+          }
+        }
+        colorValue += ")";
+        return colorValue;
+      }
+
+      // 随机产生十六进制颜色
+      function getRandomColor() {
+        var colorarr = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A",
+                       "B", "C", "D", "E", "F"];
+        var colorValue = "#";
+        for (var i = 0; i < 6; i++) {
+          colorValue += colorarr[Math.round(Math.random() * 15)];
+        }
+        return colorValue;
+      }
+    </script>
+  </body>
+</html>

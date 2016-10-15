@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .main{
+        width: 310px;
+        height: 441px;
+        margin: 480px auto 0;
+        position: relative;
+      }
+      .card{
+        position: absolute;
+        transform-origin: top left;
+        transition: all 0.5s linear;
+      }
+      .main:hover .card:nth-child(1){
+        transform: rotate(60deg)
+      }
+      .main:hover .card:nth-child(2){
+        transform: rotate(120deg)
+      }
+      .main:hover .card:nth-child(3){
+        transform: rotate(180deg)
+      }
+      .main:hover .card:nth-child(4){
+        transform: rotate(240deg)
+      }
+      .main:hover .card:nth-child(5){
+        transform: rotate(300deg)
+      }
+      .main:hover .card:nth-child(6){
+        transform: rotate(360deg)
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <img class="card" src="./pk1.png" alt="">
+      <img class="card" src="./pk2.png" alt="">
+      <img class="card" src="./pk1.png" alt="">
+      <img class="card" src="./pk2.png" alt="">
+      <img class="card" src="./pk1.png" alt="">
+      <img class="card" src="./pk2.png" alt="">
+    </div>
+  </body>
+</html>

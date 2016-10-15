@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>切换按钮自动生成</title>
+    <style media="screen">
+      #div-1 {
+        width: 1200px;
+        height: 800px;
+        margin: 100px auto 0;
+        position: relative;
+      }
+      #div-1 img {
+        position: absolute;
+      }
+      #div-1 div {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+      }
+      span {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        background-color: rgb(249, 204, 226);
+        border-radius: 25px;
+        font-size: 30px;
+        color: white;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 5px 0 5px;
+        cursor: pointer;
+      }
+      #div-1 img.current {
+        display: none;
+      }
+      #div-1 div span.current {
+        color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="div-1">
+      <img src="./image/1.jpg" alt="">
+      <img src="./image/2.jpg" alt="">
+      <img src="./image/5.jpg" alt="">
+      <img src="./image/7.jpg" alt="">
+      <img src="./image/9.jpg" alt="">
+      <div></div>
+    </div>
+
+    <script type="text/javascript">
+      var div1 = document.getElementById("div-1");
+      var imgs = div1.getElementsByTagName("img");
+      var divSon = div1.children[5];
+
+      for (var i = 0; i < imgs.length; i++) {
+        var span = document.createElement("span");
+        span.innerHTML = i + 1 + "";
+        divSon.appendChild(span);
+      }
+
+      var spans = divSon.children
+      for (var i = 0; i < spans.length; i++) {
+        spans[i].index = i;
+        spans[i].onclick = function () {
+          for (var j = 0; j < imgs.length; j++) {
+            imgs[j].className = "current";
+            spans[j].className = "";
+          }
+          imgs[this.index].className = "";
+          this.className = "current";
+        }
+      }
+    </script>
+  </body>
+</html>

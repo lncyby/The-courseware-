@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>创建一个新的元素</title>
+    <style media="screen">
+    div { display: none;}
+    </style>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function(){
+      $('button#one').click(function(){
+        $('#div-one').show();
+      });
+      $('button#two').click(function(){
+        $('#div-two').show(1500);
+        //$(this).hide(1000);
+      });
+      $('button#three').click(function(){
+        // 显示当前对象
+        // 2000: 动画持续时间
+        // function: 动画完成后执行的函数
+        $('#div-three').show(2000, function(){
+          $(this).css('color', 'red');
+        });
+      });
+
+    });
+    </script>
+</head>
+<body>
+  <button id="one">第一个马上显出来</button>
+  <button id="two">第二个有延时.</button>
+  <button id="three">马上显出来</button>
+  <div id="div-one">1. 单击这里, 马上消失!</div>
+  <div id="div-two">2. 单击这里, 会一定延迟消失, 这是以毫秒为单位.</div>
+  <div id="div-three">3. 单击这里, 将会用remove真正删除元素.</div>
+
+</body>
+</html>

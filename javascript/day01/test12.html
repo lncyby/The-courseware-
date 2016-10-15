@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改背景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            height: 100%;
+            background: url("./image/baidu/2.jpg") no-repeat top center;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn">点击更换背景</button>
+
+    <script>
+        var btn = document.getElementById("btn");
+        btn.onclick = function () {
+      
+      /*
+      * 尽量不要直接修改background,否则会覆盖原先的background的样式
+      * */
+      //            document.body.style.background = "url(./image/baidu/3.jpg)";
+
+      //最好直接修改其中的一个具体的属性
+        document.body.style.backgroundImage = "url(./image/baidu/3.jpg)";
+    };
+    </script>
+</body>
+</html>

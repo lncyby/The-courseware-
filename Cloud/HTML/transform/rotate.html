@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      .origin{
+        width: 500px;
+        height: 300px;
+        border: 6px dashed silver;
+        margin: 100px auto 0;
+      }
+      .current{
+        width: 500px;
+        height: 300px;
+        background-color: #228fbd;
+        transition: all 1s linear;
+      }
+      #div-1:hover{
+        transform: rotate(90deg);
+      }
+      #div-2{
+        /* 设置底边中心店为旋转原点 */
+        transform-origin: bottom center;
+      }
+      #div-2:hover{
+        transform: rotate(90deg);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="origin">
+      <div class="current" id="div-1"></div>
+    </div>
+    <div class="origin">
+      <div class="current" id="div-2"></div>
+    </div>
+  </body>
+</html>

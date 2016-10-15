@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>DOM2级事件处理程序</title>
+    <style media="screen">
+      div{
+        width: 300px;
+        height: 300px;
+        border-radius: 150px;
+        background-color: rgb(47, 204, 195);
+      }
+    </style>
+  </head>
+  <body>
+
+    <div id="div-id"></div>
+
+    <script type="text/javascript">
+      // EventTarget.addEventListener()将指定的事件监听器注册到EventTarget上，
+      // 当该对象触发指定的事件时，指定的回调函数就会被执行。
+
+        var divId = document.getElementById("div-id");
+        function func1() {
+          alert("div被点击。")
+        }
+        function func2() {
+          alert("div又被点了。")
+        }
+        // false, 表示在冒泡阶段调用事件处理程序
+        // true, 表示在捕获阶段调用事件处理程序
+        divId.addEventListener("click", func1, false);
+        // DOM2级方法可以添加多个事件处理程序
+        divId.addEventListener("click", func2, false);
+
+        // 移除DOM2级事件处理程序
+        // DOM2级事件处理程序如果为匿名函数，将无法移除
+        divId.removeEventListener("click", func2, false);
+    </script>
+
+  </body>
+</html>

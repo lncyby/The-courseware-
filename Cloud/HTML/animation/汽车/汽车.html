@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      html{
+        background-color: #020202;
+      }
+      div{
+        width: 500px;
+        margin: 500px 0 100px 0;
+        animation: run 3s linear;
+      }
+      div img{
+        width: 500px;
+      }
+      @keyframes run{
+        0%{
+          transform: translateX(0) skewX(0);
+        }
+        10%{
+          transform: skewX(30deg) translateX(0);
+        }
+        90%{
+          transform: translateX(1000px) skewX(-30deg);
+        }
+        100%{
+          transform: translateX(1000px) skewX(0);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img src="./lexus.jpg" alt="">
+    </div>
+  </body>
+</html>

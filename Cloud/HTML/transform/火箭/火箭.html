@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+      html{
+        background-color: #33a3dc;
+      }
+      div{
+        width: 101px;
+        height: 190px;
+        background-image: url("rocket.png");
+        position: absolute;
+        bottom: 0px;
+        transform: rotate(45deg) translate(-101px, 400px);
+        transition: all 1s linear;
+      }
+      html:hover div{
+        /* translate属性是相对于自身进行位移 */
+        transform: rotate(45deg) translate(200px, -800px);
+      }
+    </style>
+  </head>
+  <body>
+      <div></div>
+  </body>
+</html>
