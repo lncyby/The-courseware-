@@ -1,4 +1,4 @@
-HTML 5 The courseware 
+想让所编写的代码，再　github　中显示效果　进行如下操作
 
 Settings  找到并点击　Launch automatic page generator 　然后找到并点击　　Continue to layouts  再找　Publish page  点击
 上方蓝色横条　Your project page has been created at https://lncyby.github.io/The-courseware-/. Read more at https://help.github.com/pages.　　选中　https://lncyby.github.io/The-courseware-/　　保存到 Edir 中的 Website  中
